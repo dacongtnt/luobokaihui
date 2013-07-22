@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'myquick' target in the 'myquick' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import<QuickDialog.h>
+#endif
+
+#if DEBUG
+#define MCRelease(x) [x release]
+#else
+#define MCRelease(x) [x release], x=nil
+#endif
