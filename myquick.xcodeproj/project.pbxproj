@@ -96,6 +96,7 @@
 		6BC2D9861799130B00E2D9CA /* LoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9851799130B00E2D9CA /* LoginInfo.m */; };
 		6BC2D98D17991A1500E2D9CA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D98C17991A1500E2D9CA /* Login.m */; };
 		6BC2D9941799369000E2D9CA /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9931799369000E2D9CA /* JSONKit.m */; };
+		72BFFD86179D4AAE00764B07 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BFFD85179D4AAE00764B07 /* AViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -271,6 +272,8 @@
 		6BC2D98C17991A1500E2D9CA /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		6BC2D9921799369000E2D9CA /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		6BC2D9931799369000E2D9CA /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		72BFFD84179D4AAE00764B07 /* AViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AViewController.h; sourceTree = SOURCE_ROOT; };
+		72BFFD85179D4AAE00764B07 /* AViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +391,8 @@
 		6BAC0ED71796330500090A21 /* myquick */ = {
 			isa = PBXGroup;
 			children = (
+				72BFFD84179D4AAE00764B07 /* AViewController.h */,
+				72BFFD85179D4AAE00764B07 /* AViewController.m */,
 				6BAA29A4179CD6BE00714C1B /* DemoViewController.h */,
 				6BAA29A5179CD6BE00714C1B /* DemoViewController.m */,
 				6BAA29A6179CD6BE00714C1B /* RootViewController.h */,
@@ -684,6 +689,7 @@
 				6BAA29AA179CD6BE00714C1B /* DemoViewController.m in Sources */,
 				6BAA29AB179CD6BE00714C1B /* RootViewController.m in Sources */,
 				6BAA29AC179CD6BE00714C1B /* SecondViewController.m in Sources */,
+				72BFFD86179D4AAE00764B07 /* AViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

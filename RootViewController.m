@@ -12,6 +12,7 @@
 #import "Login.h"
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "AViewController.h"
 
 @interface RootViewController ()
 
@@ -44,7 +45,7 @@
             [menu setRootViewController:navigationController];
         }];
         RESideMenuItem *activityItem = [[RESideMenuItem alloc] initWithTitle:@"录音" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            SecondViewController *secondViewController = [[SecondViewController alloc] init];
+            AViewController *secondViewController = [[AViewController alloc] init];
             secondViewController.title = item.title;
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
             [menu setRootViewController:navigationController];
