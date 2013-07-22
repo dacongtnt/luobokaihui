@@ -13,7 +13,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "AViewController.h"
-
+#import "AudioView.h"
 @interface RootViewController ()
 
 @end
@@ -33,7 +33,7 @@
 {
     if (!_sideMenu) {
         RESideMenuItem *homeItem = [[RESideMenuItem alloc] initWithTitle:@"音乐播放器" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            DemoViewController *viewController = [[DemoViewController alloc] init];
+            AudioView *viewController = [[AudioView alloc] init];
             viewController.title = item.title;
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
             [menu setRootViewController:navigationController];
