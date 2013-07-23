@@ -36,61 +36,6 @@
     [super dealloc];
 }
 
--(void)playButtonSound
-{
-    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
-    NSString *result=[userDefaults objectForKey:@"isOpenAudio"];
-    NSURL *url=[[[NSBundle mainBundle]resourceURL] URLByAppendingPathComponent:@"btnEffect.wav"];
-    NSError *error;
-    if(self.buttonSound==nil)
-    {
-        self.buttonSound=[[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error] autorelease];
-        if(!error)
-        {
-            NSLog(@"%@",[error description]);
-        }
-    }
-    if([result isEqualToString:@"YES"]||result==nil)//播放声音
-    {
-        if(!self.isFistLoadSound)
-        {
-            self.buttonSound.volume=1.0f;
-        }
-    }
-    else
-    {
-        self.buttonSound.volume=0.0f;
-    }
-    [self.buttonSound play];
-}
-
--(void)playDownloadSound
-{
-    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
-    NSString *result=[userDefaults objectForKey:@"isOpenAudio"];
-    NSURL *url=[[[NSBundle mainBundle]resourceURL] URLByAppendingPathComponent:@"download-complete.wav"];
-    NSError *error;
-    if(self.downloadCompleteSound==nil)
-    {
-        self.downloadCompleteSound=[[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error] autorelease];
-        if(!error)
-        {
-            NSLog(@"%@",[error description]);
-        }
-    }
-    if([result isEqualToString:@"YES"]||result==nil)//播放声音
-    {
-        if(!self.isFistLoadSound)
-        {
-            self.downloadCompleteSound.volume=1.0f;
-        }
-    }
-    else
-    {
-        self.downloadCompleteSound.volume=0.0f;
-    }
-    [self.downloadCompleteSound play];
-}
 
 -(void)beginRequest:(FileModel *)fileInfo isBeginDown:(BOOL)isBeginDown
 {
@@ -251,10 +196,6 @@
     self.root=[Login create];
     UINavigationController *nav=[QuickDialogController controllerWithNavigationForRoot:self.root];
     
-    self.isFistLoadSound=YES;
-    [self playButtonSound];
-    [self playDownloadSound];
-    self.isFistLoadSound=NO;
     [self loadFinishedfiles];
     [self loadTempfiles];
     
@@ -294,23 +235,23 @@
 //**注意：如果要要ASIHttpRequest自动断点续传，则不需要写上该方法，整个过程ASIHttpRequest会自动识别URL进行保存数据的
 //如果设置了该方法，ASIHttpRequest则不会响应断点续传功能，需要自己手动写入接收到的数据，开始不明白原理，搞了很久才明白，如果本人理解不正确的话，请高人及时指点啊^_^QQ:1023217825
 //***********
-//-(void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data
-//{
-//    FileModel *fileInfo=(FileModel *)[request.userInfo objectForKey:@"File"];
-//    [fileInfo.fileReceivedData appendData:data];
-//    fileInfo.fileReceivedSize=[NSString stringWithFormat:@"%d",[fileInfo.fileReceivedData length]];
-//    [fileInfo.fileReceivedData writeToFile:request.temporaryFileDownloadPath atomically:NO];
-//    NSString *configPath=[[CommonHelper getTempFolderPath] stringByAppendingPathComponent:[fileInfo.fileName stringByAppendingString:@".rtf"]];
-//    NSString *tmpConfigMsg=[NSString stringWithFormat:@"%@,%@,%@,%@",fileInfo.fileName,fileInfo.fileSize,fileInfo.fileReceivedSize,fileInfo.fileURL];
-//    NSError *error;
-//    [tmpConfigMsg writeToFile:configPath atomically:YES encoding:NSUTF8StringEncoding error:&error];
-//    if(!error)
-//    {
-//        NSLog(@"错误%@",[error description]);
-//    }
-//    [self.downloadDelegate updateCellProgress:fileInfo];
-//    NSLog(@"正在接受搜数据%d",[fileInfo.fileReceivedData length]);
-//}
+-(void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data
+{
+    FileModel *fileInfo=(FileModel *)[request.userInfo objectForKey:@"File"];
+    [fileInfo.fileReceivedData appendData:data];
+    fileInfo.fileReceivedSize=[NSString stringWithFormat:@"%d",[fileInfo.fileReceivedData length]];
+    [fileInfo.fileReceivedData writeToFile:request.temporaryFileDownloadPath atomically:NO];
+    NSString *configPath=[[CommonHelper getTempFolderPath] stringByAppendingPathComponent:[fileInfo.fileName stringByAppendingString:@".rtf"]];
+    NSString *tmpConfigMsg=[NSString stringWithFormat:@"%@,%@,%@,%@",fileInfo.fileName,fileInfo.fileSize,fileInfo.fileReceivedSize,fileInfo.fileURL];
+    NSError *error;
+    [tmpConfigMsg writeToFile:configPath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    if(!error)
+    {
+        NSLog(@"错误%@",[error description]);
+    }
+    [self.downloadDelegate updateCellProgress:fileInfo];
+    NSLog(@"正在接受搜数据%d",[fileInfo.fileReceivedData length]);
+}
 
 //1.实现ASIProgressDelegate委托，在此实现UI的进度条更新,这个方法必须要在设置[request setDownloadProgressDelegate:self];之后才会运行
 //2.这里注意第一次返回的bytes是已经下载的长度，以后便是每次请求数据的大小
