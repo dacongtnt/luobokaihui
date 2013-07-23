@@ -96,7 +96,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImageView *downingImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"downloading_bg.jpg"]];
+    UIImageView *downingImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background3.jpg"]];
     downingImg.alpha=0.3f;
     self.downloadingTable.backgroundView=downingImg;
     [downingImg release];

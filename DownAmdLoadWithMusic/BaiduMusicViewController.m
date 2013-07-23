@@ -187,7 +187,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImageView *img=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"baidu_bg.jpg"]];
+    UIImageView *img=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background4.jpg"]];
     img.alpha=0.3;
     self.musicTable.backgroundView=img;
     [img release];

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027B1D6C179E86EF00AB5EBF /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D65179E86EF00AB5EBF /* background.jpg */; };
+		027B1D6D179E86EF00AB5EBF /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D66179E86EF00AB5EBF /* background2.jpg */; };
+		027B1D6E179E86EF00AB5EBF /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D67179E86EF00AB5EBF /* background3.jpg */; };
+		027B1D6F179E86EF00AB5EBF /* background4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D68179E86EF00AB5EBF /* background4.jpg */; };
+		027B1D70179E86EF00AB5EBF /* download.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D69179E86EF00AB5EBF /* download.jpg */; };
+		027B1D71179E86EF00AB5EBF /* OK.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D6A179E86EF00AB5EBF /* OK.jpg */; };
+		027B1D72179E86EF00AB5EBF /* pause.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D6B179E86EF00AB5EBF /* pause.jpg */; };
+		027B1D76179E878A00AB5EBF /* download1.png in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D74179E878A00AB5EBF /* download1.png */; };
+		027B1D77179E878A00AB5EBF /* OK2.png in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D75179E878A00AB5EBF /* OK2.png */; };
 		6BA2715C179A56CB0035AA75 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715B179A56CB0035AA75 /* CFNetwork.framework */; };
 		6BA2715E179A56D80035AA75 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715D179A56D80035AA75 /* SystemConfiguration.framework */; };
 		6BA27160179A56E40035AA75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715F179A56E40035AA75 /* MobileCoreServices.framework */; };
@@ -156,6 +165,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		027B1D65179E86EF00AB5EBF /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		027B1D66179E86EF00AB5EBF /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
+		027B1D67179E86EF00AB5EBF /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
+		027B1D68179E86EF00AB5EBF /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background4.jpg; sourceTree = "<group>"; };
+		027B1D69179E86EF00AB5EBF /* download.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpg; sourceTree = "<group>"; };
+		027B1D6A179E86EF00AB5EBF /* OK.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OK.jpg; sourceTree = "<group>"; };
+		027B1D6B179E86EF00AB5EBF /* pause.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pause.jpg; sourceTree = "<group>"; };
+		027B1D74179E878A00AB5EBF /* download1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download1.png; sourceTree = "<group>"; };
+		027B1D75179E878A00AB5EBF /* OK2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OK2.png; sourceTree = "<group>"; };
 		6BA2715B179A56CB0035AA75 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6BA2715D179A56D80035AA75 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6BA2715F179A56E40035AA75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -431,6 +449,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		027B1D64179E86EF00AB5EBF /* Downloadimage */ = {
+			isa = PBXGroup;
+			children = (
+				027B1D74179E878A00AB5EBF /* download1.png */,
+				027B1D75179E878A00AB5EBF /* OK2.png */,
+				027B1D65179E86EF00AB5EBF /* background.jpg */,
+				027B1D66179E86EF00AB5EBF /* background2.jpg */,
+				027B1D67179E86EF00AB5EBF /* background3.jpg */,
+				027B1D68179E86EF00AB5EBF /* background4.jpg */,
+				027B1D69179E86EF00AB5EBF /* download.jpg */,
+				027B1D6A179E86EF00AB5EBF /* OK.jpg */,
+				027B1D6B179E86EF00AB5EBF /* pause.jpg */,
+			);
+			path = Downloadimage;
+			sourceTree = "<group>";
+		};
 		6BAA298D179CD59D00714C1B /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +707,7 @@
 		6BE0A37D179E66A7005B749C /* DownAmdLoadWithMusic */ = {
 			isa = PBXGroup;
 			children = (
+				027B1D64179E86EF00AB5EBF /* Downloadimage */,
 				6BE0A48A179E7D5C005B749C /* ASIHTTPRequest */,
 				6BE0A428179E69C9005B749C /* JSON */,
 				6BE0A399179E66A7005B749C /* BaiduMusicHelper.h */,
@@ -891,6 +926,15 @@
 				6BE0A3F6179E66A7005B749C /* DownloadViewController.xib in Resources */,
 				6BE0A3FC179E66A7005B749C /* FinishedCell.xib in Resources */,
 				6BE0A408179E66A7005B749C /* MusicCell.xib in Resources */,
+				027B1D6C179E86EF00AB5EBF /* background.jpg in Resources */,
+				027B1D6D179E86EF00AB5EBF /* background2.jpg in Resources */,
+				027B1D6E179E86EF00AB5EBF /* background3.jpg in Resources */,
+				027B1D6F179E86EF00AB5EBF /* background4.jpg in Resources */,
+				027B1D70179E86EF00AB5EBF /* download.jpg in Resources */,
+				027B1D71179E86EF00AB5EBF /* OK.jpg in Resources */,
+				027B1D72179E86EF00AB5EBF /* pause.jpg in Resources */,
+				027B1D76179E878A00AB5EBF /* download1.png in Resources */,
+				027B1D77179E878A00AB5EBF /* OK2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

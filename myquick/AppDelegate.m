@@ -257,6 +257,7 @@
     self.isFistLoadSound=NO;
     [self loadFinishedfiles];
     [self loadTempfiles];
+    [self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]];
     
     [self.window addSubview:nav.view];
     self.window.rootViewController=nav;
