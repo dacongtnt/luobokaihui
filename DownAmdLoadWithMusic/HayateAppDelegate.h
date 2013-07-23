@@ -1,9 +1,9 @@
 //
-//  AppDelegate.h
-//  myquick
+//  HayateAppDelegate.h
+//  DownLoad3
 //
-//  Created by 赵云 on 13-7-17.
-//  Copyright (c) 2013年 赵云. All rights reserved.
+//  Created by 张翼德 on 13-7-20.
+//  Copyright (c) 2013年 张飞. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,17 +15,16 @@
 #import "DownloadCell.h"
 #import <AVFoundation/AVAudioPlayer.h>
 
-@class ViewController;
+@class HayateViewController;
 
+@interface HayateAppDelegate : NSObject <UIApplicationDelegate
+,ASIHTTPRequestDelegate,ASIProgressDelegate> {
+    
+}
 
+@property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,ASIHTTPRequestDelegate,ASIProgressDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ViewController *viewController;
-
-@property (retain,nonatomic) QRootElement *root;
+@property (nonatomic, retain) IBOutlet UITabBarController *tabController;
 
 @property(nonatomic,retain)NSMutableArray *finishedlist;//已下载完成的文件列表（文件对象）
 
@@ -48,7 +47,4 @@
 //1.点击百度或者土豆的下载，进行一次新的队列请求
 //2.是否接着开始下载
 -(void)beginRequest:(FileModel *)fileInfo isBeginDown:(BOOL)isBeginDown;
-
-+ (NSInteger)OSVersion;
-
 @end

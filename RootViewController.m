@@ -14,6 +14,8 @@
 #import "AppDelegate.h"
 #import "AViewController.h"
 #import "AudioView.h"
+#import "DownloadViewController.h"
+#import "BaiduMusicViewController.h"
 #import <dispatch/dispatch.h>
 
 @interface RootViewController ()
@@ -56,11 +58,27 @@
         });
         
         dispatch_async(myQueue, ^{
-            __block  SecondViewController *secondViewController = nil;
+            __block  BaiduMusicViewController *secondViewController = nil;
             __block  RESideMenuItem *exploreItem=nil;
             dispatch_sync(myQueue, ^{
-                secondViewController = [[SecondViewController alloc] init];
+                secondViewController = [[BaiduMusicViewController alloc] init];
                 exploreItem = [[RESideMenuItem alloc] initWithTitle:@"音乐下载" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                    secondViewController.title = item.title;
+                    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    [menu setRootViewController:navigationController];
+                }];
+            });
+            dispatch_sync(mainQueue, ^{
+                [myArray addObject:exploreItem];
+            });
+        });
+        
+        dispatch_async(myQueue, ^{
+            __block  DownloadViewController *secondViewController = nil;
+            __block  RESideMenuItem *exploreItem=nil;
+            dispatch_sync(myQueue, ^{
+                secondViewController = [[DownloadViewController alloc] init];
+                exploreItem = [[RESideMenuItem alloc] initWithTitle:@"已下载的音乐" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     secondViewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
                     [menu setRootViewController:navigationController];
