@@ -14,6 +14,8 @@
 #import "AppDelegate.h"
 #import "AViewController.h"
 #import "AudioView.h"
+#import <dispatch/dispatch.h>
+
 @interface RootViewController ()
 
 @end
@@ -32,66 +34,92 @@
 - (void)showMenu
 {
     if (!_sideMenu) {
-        RESideMenuItem *homeItem = [[RESideMenuItem alloc] initWithTitle:@"音乐播放器" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            AudioView *viewController = [[AudioView alloc] init];
-            viewController.title = item.title;
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-            [menu setRootViewController:navigationController];
-        }];
-        RESideMenuItem *exploreItem = [[RESideMenuItem alloc] initWithTitle:@"音乐下载" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            SecondViewController *secondViewController = [[SecondViewController alloc] init];
-            secondViewController.title = item.title;
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
-            [menu setRootViewController:navigationController];
-        }];
-        RESideMenuItem *activityItem = [[RESideMenuItem alloc] initWithTitle:@"录音" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            AViewController *secondViewController = [[AViewController alloc] init];
-            secondViewController.title = item.title;
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
-            [menu setRootViewController:navigationController];
-            NSLog(@"Item %@", item);
-        }];
-        RESideMenuItem *profileItem = [[RESideMenuItem alloc] initWithTitle:@"关于我们" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            SecondViewController *secondViewController = [[SecondViewController alloc] init];
-            secondViewController.title = item.title;
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
-            [menu setRootViewController:navigationController];
-            NSLog(@"Item %@", item);
-        }];
-//        RESideMenuItem *aroundMeItem = [[RESideMenuItem alloc] initWithTitle:@"Around Me" action:^(RESideMenu *menu, RESideMenuItem *item) {
-//            [menu hide];
-//            NSLog(@"Item %@", item);
-//        }];
-//        
-//        RESideMenuItem *helpPlus1 = [[RESideMenuItem alloc] initWithTitle:@"How to use" action:^(RESideMenu *menu, RESideMenuItem *item) {
-//            NSLog(@"Item %@", item);
-//            [menu hide];
-//        }];
-//        
-//        RESideMenuItem *helpPlus2 = [[RESideMenuItem alloc] initWithTitle:@"Helpdesk" action:^(RESideMenu *menu, RESideMenuItem *item) {
-//            NSLog(@"Item %@", item);
-//            [menu hide];
-//        }];
-//        
-//        RESideMenuItem *helpCenterItem = [[RESideMenuItem alloc] initWithTitle:@"Help +" action:^(RESideMenu *menu, RESideMenuItem *item) {
-//            NSLog(@"Item %@", item);
-//        }];
-//        helpCenterItem.subItems  = @[helpPlus1,helpPlus2];
-//        
-//        RESideMenuItem *itemWithSubItems = [[RESideMenuItem alloc] initWithTitle:@"Sub items +" action:^(RESideMenu *menu, RESideMenuItem *item) {
-//            NSLog(@"Item %@", item);
-//        }];
-//        itemWithSubItems.subItems = @[aroundMeItem,helpCenterItem];
         
-        RESideMenuItem *logOutItem = [[RESideMenuItem alloc] initWithTitle:@"注销" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            UIActionSheet *alertView = [[UIActionSheet alloc] initWithTitle:@"提示" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alertView showInView:self.view];
-
-        }];
+        dispatch_queue_t myQueue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_queue_t mainQueue=dispatch_get_main_queue();
+        NSMutableArray *myArray=[[NSMutableArray alloc] init];
         
-        _sideMenu = [[RESideMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem, logOutItem]];
-//        _sideMenu.verticalOffset = IS_WIDESCREEN ? 110 : 76;
-//        _sideMenu.hideStatusBarArea = [AppDelegate OSVersion] < 7;
+        dispatch_async(myQueue, ^{
+            __block  AudioView *viewController = nil;
+            __block  RESideMenuItem *homeItem=nil;
+            dispatch_sync(myQueue, ^{
+                viewController = [[AudioView alloc] init];
+                homeItem = [[RESideMenuItem alloc] initWithTitle:@"音乐播放器" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                    viewController.title = item.title;
+                    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+                    [menu setRootViewController:navigationController];
+                }];
+            });
+            dispatch_sync(mainQueue, ^{
+                [myArray addObject:homeItem];
+            });
+        });
+        
+        dispatch_async(myQueue, ^{
+            __block  SecondViewController *secondViewController = nil;
+            __block  RESideMenuItem *exploreItem=nil;
+            dispatch_sync(myQueue, ^{
+                secondViewController = [[SecondViewController alloc] init];
+                exploreItem = [[RESideMenuItem alloc] initWithTitle:@"音乐下载" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                    secondViewController.title = item.title;
+                    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    [menu setRootViewController:navigationController];
+                }];
+            });
+            dispatch_sync(mainQueue, ^{
+                [myArray addObject:exploreItem];
+            });
+        });
+        
+        dispatch_async(myQueue, ^{
+            __block  AViewController *secondViewController = nil;
+            __block  RESideMenuItem *activityItem=nil;
+            dispatch_sync(myQueue, ^{
+                secondViewController = [[AViewController alloc] init];
+                activityItem = [[RESideMenuItem alloc] initWithTitle:@"录音" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                    secondViewController.title = item.title;
+                    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    [menu setRootViewController:navigationController];
+                }];
+            });
+            dispatch_sync(mainQueue, ^{
+                [myArray addObject:activityItem];
+            });
+        });
+        
+        dispatch_async(myQueue, ^{
+            __block  SecondViewController *secondViewController = nil;
+            __block  RESideMenuItem *profileItem=nil;
+            dispatch_sync(myQueue, ^{
+                secondViewController = [[SecondViewController alloc] init];
+                profileItem = [[RESideMenuItem alloc] initWithTitle:@"关于我们" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                    secondViewController.title = item.title;
+                    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    [menu setRootViewController:navigationController];
+                }];
+            });
+            dispatch_sync(mainQueue, ^{
+                [myArray addObject:profileItem];
+            });
+        });
+        
+        dispatch_async(myQueue, ^{
+            __block  SecondViewController *secondViewController = nil;
+            __block  RESideMenuItem *logOutItem=nil;
+            dispatch_sync(myQueue, ^{
+                secondViewController = [[SecondViewController alloc] init];
+                logOutItem = [[RESideMenuItem alloc] initWithTitle:@"注销" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                    UIActionSheet *alertView = [[UIActionSheet alloc] initWithTitle:@"提示" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    [alertView showInView:self.view];                }];
+            });
+            dispatch_sync(mainQueue, ^{
+                [myArray addObject:logOutItem];
+            });
+        });
+        
+        _sideMenu = [[RESideMenu alloc] initWithItems:myArray];
+        //        _sideMenu.verticalOffset = IS_WIDESCREEN ? 110 : 76;
+        //        _sideMenu.hideStatusBarArea = [AppDelegate OSVersion] < 7;
     }
     
     [_sideMenu show];
@@ -103,9 +131,10 @@
         UINavigationController *nav=[QuickDialogController controllerWithNavigationForRoot:root];
         [self.sideMenu setRootViewController:nav];
     }
-
-
+    
+    
 }
+
 
 
 @end

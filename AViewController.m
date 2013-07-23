@@ -82,9 +82,6 @@
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
     [audioSession setActive:YES error: &error];
     
-    UIBarButtonItem *leftItem=[[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(liftButton)];
-    self.navigationItem.leftBarButtonItem=leftItem;
-    [leftItem release];
     UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithTitle:@"完成的录音" style:UIBarButtonItemStylePlain target:self action:@selector(rightButton)];
     self.navigationItem.rightBarButtonItem=rightItem;
     [rightItem release];

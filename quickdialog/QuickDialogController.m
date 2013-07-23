@@ -17,6 +17,8 @@
 #import "ASIHTTPRequest.h"
 #import "Login.h"
 #import "DemoViewController.h"
+#import "AudioView.h"
+
 @interface QuickDialogController ()
 
 + (Class)controllerClassForRoot:(QRootElement *)root;
@@ -186,7 +188,7 @@
 //}
 
 
-//这里是我自己添加d方法
+//这里是我自己添加的方法
 - (void)loginCompleted:(LoginInfo *)info {
     [self loading:NO];
     NSLog(@"%@,%@",info.login,info.password);
@@ -261,7 +263,7 @@
 //            QRootElement *root=[Login createMainFrom];
 //            ViewController *view=[[ViewController alloc] initWithRoot:root];
                 
-                DemoViewController *view=[[DemoViewController alloc] init];
+                AudioView *view=[[AudioView alloc] init];
                 
                 [self.navigationController pushViewController:view animated:YES];
                 MCRelease(view);
@@ -270,16 +272,11 @@
                 [WarnAlertb show];
                 MCRelease(WarnAlertb);
             }
-
         }
-               
-
     }
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:[NSString stringWithFormat: @"Hi %@, you're loving QuickForms!", info.login] delegate:self cancelButtonTitle:@"YES!" otherButtonTitles:nil];
-//    [alert show];
 }
 
-//这里是我自己添加d方法
+//这里是我自己添加的方法
 - (void)onLogin:(QButtonElement *)buttonElement {
     [self loading:YES];
     LoginInfo *info = [[LoginInfo alloc] init];

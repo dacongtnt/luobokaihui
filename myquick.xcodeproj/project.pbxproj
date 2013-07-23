@@ -29,7 +29,6 @@
 		6BAA29A0179CD59D00714C1B /* RESideMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA2997179CD59D00714C1B /* RESideMenuCell.m */; };
 		6BAA29A1179CD59D00714C1B /* RESideMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA2999179CD59D00714C1B /* RESideMenuItem.m */; };
 		6BAA29A2179CD59D00714C1B /* UIWindow+RESideMenuExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA299B179CD59D00714C1B /* UIWindow+RESideMenuExtensions.m */; };
-		6BAA29AA179CD6BE00714C1B /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA29A5179CD6BE00714C1B /* DemoViewController.m */; };
 		6BAA29AB179CD6BE00714C1B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA29A7179CD6BE00714C1B /* RootViewController.m */; };
 		6BAA29AC179CD6BE00714C1B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA29A9179CD6BE00714C1B /* SecondViewController.m */; };
 		6BAA29AE179CD7CF00714C1B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAA29AD179CD7CF00714C1B /* QuartzCore.framework */; };
@@ -170,8 +169,6 @@
 		6BAA2999179CD59D00714C1B /* RESideMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenuItem.m; sourceTree = "<group>"; };
 		6BAA299A179CD59D00714C1B /* UIWindow+RESideMenuExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+RESideMenuExtensions.h"; sourceTree = "<group>"; };
 		6BAA299B179CD59D00714C1B /* UIWindow+RESideMenuExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+RESideMenuExtensions.m"; sourceTree = "<group>"; };
-		6BAA29A4179CD6BE00714C1B /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoViewController.h; path = ../DemoViewController.h; sourceTree = "<group>"; };
-		6BAA29A5179CD6BE00714C1B /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoViewController.m; path = ../DemoViewController.m; sourceTree = "<group>"; };
 		6BAA29A6179CD6BE00714C1B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
 		6BAA29A7179CD6BE00714C1B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
 		6BAA29A8179CD6BE00714C1B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
@@ -304,12 +301,12 @@
 		72BFFD8C179D4BEC00764B07 /* music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music.jpg; sourceTree = "<group>"; };
 		72BFFD8F179D4C5A00764B07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72BFFD91179D4C6700764B07 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		A7A63A50179D4E1A00B04F46 /* MDAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAudioFile.h; sourceTree = "<group>"; };
-		A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAudioFile.m; sourceTree = "<group>"; };
-		A7A63A52179D4E1A00B04F46 /* MDAudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAudioPlayerController.h; sourceTree = "<group>"; };
-		A7A63A53179D4E1A00B04F46 /* MDAudioPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAudioPlayerController.m; sourceTree = "<group>"; };
-		A7A63A57179D4EF300B04F46 /* AudioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioView.h; sourceTree = "<group>"; };
-		A7A63A58179D4EF300B04F46 /* AudioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioView.m; sourceTree = "<group>"; };
+		A7A63A50179D4E1A00B04F46 /* MDAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAudioFile.h; path = myquick/MDAudioFile.h; sourceTree = "<group>"; };
+		A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAudioFile.m; path = myquick/MDAudioFile.m; sourceTree = "<group>"; };
+		A7A63A52179D4E1A00B04F46 /* MDAudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAudioPlayerController.h; path = myquick/MDAudioPlayerController.h; sourceTree = "<group>"; };
+		A7A63A53179D4E1A00B04F46 /* MDAudioPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAudioPlayerController.m; path = myquick/MDAudioPlayerController.m; sourceTree = "<group>"; };
+		A7A63A57179D4EF300B04F46 /* AudioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioView.h; path = myquick/AudioView.h; sourceTree = "<group>"; };
+		A7A63A58179D4EF300B04F46 /* AudioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioView.m; path = myquick/AudioView.m; sourceTree = "<group>"; };
 		A7A63A5A179D4F0900B04F46 /* 123.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 123.mp3; path = myquick/123.mp3; sourceTree = "<group>"; };
 		A7A63A5B179D4F0900B04F46 /* me and you.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "me and you.mp3"; path = "myquick/me and you.mp3"; sourceTree = "<group>"; };
 		A7A63A5C179D4F0900B04F46 /* 没那么简单.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "没那么简单.mp3"; path = "myquick/没那么简单.mp3"; sourceTree = "<group>"; };
@@ -410,9 +407,9 @@
 		6BAC0EC21796330400090A21 = {
 			isa = PBXGroup;
 			children = (
+				6BE0A18A179E3793005B749C /* AudioPlayerForMusic */,
 				A7A63A63179D501E00B04F46 /* Images */,
 				A7A63A62179D4F2000B04F46 /* Music */,
-				72BFFD8C179D4BEC00764B07 /* music.jpg */,
 				6BAA298D179CD59D00714C1B /* RESideMenu */,
 				6BA27165179A58470035AA75 /* ASIHTTP */,
 				6BC2D996179936B300E2D9CA /* LoginView */,
@@ -455,16 +452,8 @@
 		6BAC0ED71796330500090A21 /* myquick */ = {
 			isa = PBXGroup;
 			children = (
-				A7A63A57179D4EF300B04F46 /* AudioView.h */,
-				A7A63A58179D4EF300B04F46 /* AudioView.m */,
-				A7A63A50179D4E1A00B04F46 /* MDAudioFile.h */,
-				A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */,
-				A7A63A52179D4E1A00B04F46 /* MDAudioPlayerController.h */,
-				A7A63A53179D4E1A00B04F46 /* MDAudioPlayerController.m */,
 				72BFFD84179D4AAE00764B07 /* AViewController.h */,
 				72BFFD85179D4AAE00764B07 /* AViewController.m */,
-				6BAA29A4179CD6BE00714C1B /* DemoViewController.h */,
-				6BAA29A5179CD6BE00714C1B /* DemoViewController.m */,
 				6BAA29A6179CD6BE00714C1B /* RootViewController.h */,
 				6BAA29A7179CD6BE00714C1B /* RootViewController.m */,
 				6BAA29A8179CD6BE00714C1B /* SecondViewController.h */,
@@ -620,9 +609,23 @@
 			name = LoginView;
 			sourceTree = "<group>";
 		};
+		6BE0A18A179E3793005B749C /* AudioPlayerForMusic */ = {
+			isa = PBXGroup;
+			children = (
+				A7A63A57179D4EF300B04F46 /* AudioView.h */,
+				A7A63A58179D4EF300B04F46 /* AudioView.m */,
+				A7A63A50179D4E1A00B04F46 /* MDAudioFile.h */,
+				A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */,
+				A7A63A52179D4E1A00B04F46 /* MDAudioPlayerController.h */,
+				A7A63A53179D4E1A00B04F46 /* MDAudioPlayerController.m */,
+			);
+			name = AudioPlayerForMusic;
+			sourceTree = "<group>";
+		};
 		A7A63A62179D4F2000B04F46 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				72BFFD8C179D4BEC00764B07 /* music.jpg */,
 				A7A63A5A179D4F0900B04F46 /* 123.mp3 */,
 				A7A63A5B179D4F0900B04F46 /* me and you.mp3 */,
 				A7A63A5C179D4F0900B04F46 /* 没那么简单.mp3 */,
@@ -813,7 +816,6 @@
 				6BAA29A0179CD59D00714C1B /* RESideMenuCell.m in Sources */,
 				6BAA29A1179CD59D00714C1B /* RESideMenuItem.m in Sources */,
 				6BAA29A2179CD59D00714C1B /* UIWindow+RESideMenuExtensions.m in Sources */,
-				6BAA29AA179CD6BE00714C1B /* DemoViewController.m in Sources */,
 				6BAA29AB179CD6BE00714C1B /* RootViewController.m in Sources */,
 				6BAA29AC179CD6BE00714C1B /* SecondViewController.m in Sources */,
 				72BFFD86179D4AAE00764B07 /* AViewController.m in Sources */,

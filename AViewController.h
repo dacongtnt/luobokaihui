@@ -10,8 +10,9 @@
 #import <CoreAudio/CoreAudioTypes.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
+#import "RootViewController.h"
 
-@interface AViewController : UIViewController<AVAudioRecorderDelegate,UIAlertViewDelegate>
+@interface AViewController : RootViewController<AVAudioRecorderDelegate,UIAlertViewDelegate>
 {
     UILabel *label;
     UILabel *labelZero;
