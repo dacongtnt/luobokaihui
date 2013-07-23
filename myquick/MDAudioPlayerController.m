@@ -120,7 +120,7 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
     }
 	else{
 		nextButton.enabled = [self canGoToNextTrack];
-	previousButton.enabled = [self canGoToPreviousTrack];
+        previousButton.enabled = [self canGoToPreviousTrack];
     }
 }
 
@@ -142,6 +142,7 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 		self.soundFilesPath = path;
 		selectedIndex = index;
         
+        
 		NSError *error = nil;
         
 		self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[(MDAudioFile *)[soundFiles objectAtIndex:selectedIndex] filePath] error:&error];
@@ -162,11 +163,20 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
 	self.view.backgroundColor = [UIColor blackColor];
 	
-	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
-	
+    //后台播放
+    [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
+	UIBackgroundTaskIdentifier newTaskId = UIBackgroundTaskInvalid;
+    newTaskId = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:NULL];
+    UIBackgroundTaskIdentifier oldTakId = 0;
+    if(newTaskId != UIBackgroundTaskInvalid && oldTakId != UIBackgroundTaskInvalid)
+    {
+        [[UIApplication sharedApplication] endBackgroundTask:oldTakId];
+    }
+    oldTakId = newTaskId;
+    
+    
 	updateTimer = nil;
 	
 	UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
@@ -178,7 +188,7 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 	[navigationBar pushNavigationItem:navItem animated:NO];
 	
 	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(dismissAudioPlayer)];
-
+    
 	navItem.leftBarButtonItem = doneButton;
 	[doneButton release];
 	doneButton = nil;
@@ -190,7 +200,7 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 	AudioSessionSetActive(true);
 	UInt32 sessionCategory = kAudioSessionCategory_MediaPlayback;
 	AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(sessionCategory), &sessionCategory);
-	
+    
 	MDAudioFile *selectedSong = [self.soundFiles objectAtIndex:selectedIndex];
 	
     //标题
@@ -329,7 +339,13 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 
 - (void)dismissAudioPlayer
 {
-
+    [player stop];
+    CGContextRef *context=UIGraphicsGetCurrentContext();
+    [UIView beginAnimations:@"curl" context:context];
+    [UIView setAnimationDuration:1.5];
+    [UIView setAnimationTransition:UIViewContentModeCenter forView:self.view cache:YES];
+    
+    [UIView commitAnimations];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -345,10 +361,9 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 		self.progressSlider = [[UISlider alloc] initWithFrame:CGRectMake(54, 20, 212, 23)];
 		[progressSlider setThumbImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AudioPlayerScrubberKnob" ofType:@"png"]]
                              forState:UIControlStateNormal];
-		[progressSlider setMinimumTrackImage:[[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AudioPlayerScrubberLeft" ofType:@"png"]] stretchableImageWithLeftCapWidth:5 topCapHeight:3]
-                                    forState:UIControlStateNormal];
-		[progressSlider setMaximumTrackImage:[[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AudioPlayerScrubberRight" ofType:@"png"]] stretchableImageWithLeftCapWidth:5 topCapHeight:3]
-                                    forState:UIControlStateNormal];
+		[progressSlider setMinimumTrackImage:[[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AudioPlayerScrubberLeft" ofType:@"png"]] stretchableImageWithLeftCapWidth:5
+                                                                                                                                                                                     topCapHeight:3]forState:UIControlStateNormal];
+        
 		[progressSlider addTarget:self action:@selector(progressSliderMoved:) forControlEvents:UIControlEventValueChanged];
 		progressSlider.maximumValue = player.duration;
 		progressSlider.minimumValue = 0.0;
@@ -443,13 +458,17 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 					  forState:UIControlStateNormal];
 		repeatOne = NO;
 		repeatAll = NO;
+        self.player.numberOfLoops=-1;
 	}
 	else if (repeatAll)
 	{
 		[repeatButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AudioPlayerRepeatOneOn" ofType:@"png"]]
 					  forState:UIControlStateNormal];
+        
+        self.player.numberOfLoops=-1;
 		repeatOne = YES;
 		repeatAll = NO;
+        
 	}
 	else
 	{
@@ -457,6 +476,7 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 					  forState:UIControlStateNormal];
 		repeatOne = NO;
 		repeatAll = YES;
+        self.player.numberOfLoops=0;
 	}
 	
 	[self updateViewForPlayerInfo:player];
@@ -613,13 +633,14 @@ void interruptionListenerCallback (void *userData, UInt32 interruptionState)
 #pragma mark -
 #pragma mark AVAudioPlayer delegate
 
+
 //播放完成时调用的方法  (代理里的方法),需要设置代理才可以调用
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)p successfully:(BOOL)flag
 {
 	if (flag == NO)
 		NSLog(@"Playback finished unsuccessfully");
 	
-	if ([self canGoToNextTrack])
+	if ([self canGoToNextTrack]|repeatAll)
         [self next];
 	else if (interrupted)
 		[self.player play];

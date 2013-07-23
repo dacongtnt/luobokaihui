@@ -9,7 +9,7 @@
 #import "AudioView.h"
 #import "MDAudioFile.h"
 #import "MDAudioPlayerController.h"
-
+#import "Memo.h"
 
 @implementation AudioView
 
@@ -21,20 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    Memo *mymemo=[[Memo alloc]init];
+    
     self.tableView=[[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 460) style:UITableViewStylePlain]autorelease];
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
     
-	self.fileArray =  [[NSMutableArray alloc] initWithObjects:
-                       [[NSBundle mainBundle] pathForResource:@"123" ofType:@"mp3"],
-                       [[NSBundle mainBundle] pathForResource:@"me and you" ofType:@"mp3"],
-                       [[NSBundle mainBundle] pathForResource:@"没那么简单" ofType:@"mp3"], nil];
-    
-//    NSFileManager *fileManager=[NSFileManager defaultManager];
-//    NSError *error;
-//    NSString *string=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
-//    NSArray *filelist=[fileManager contentsOfDirectoryAtPath:string error:&error];
-//    NSLog(@"%@",filelist);
+	self.fileArray = [[NSMutableArray alloc]initWithArray:[mymemo loadOldFile]];
     
     
     [self.view addSubview:self.tableView];
@@ -94,7 +87,7 @@
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
-
+        
     }
 }
 
@@ -103,16 +96,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    CGContextRef *context=UIGraphicsGetCurrentContext();
+    [UIView beginAnimations:@"curl" context:context];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+    
+    [UIView commitAnimations];
+    
 	NSMutableArray *songs = [[NSMutableArray alloc] init];
-	
+	Memo *mymemo=[[Memo alloc]init];
+    
+    [songs removeAllObjects];
 	for (NSString *song in fileArray)
 	{
+        NSString *soundFilePath=[mymemo.filePath stringByAppendingPathComponent:song];
         //初始化音频类 并且添加播放文件,把音频文件转换成url格式
-		MDAudioFile *audioFile = [[MDAudioFile alloc] initWithPath:[NSURL fileURLWithPath:song]];
+		MDAudioFile *audioFile = [[MDAudioFile alloc] initWithPath:[NSURL fileURLWithPath:soundFilePath]];
+        
 		[songs addObject:audioFile];
 	}
-        //添加控制器
+    //添加控制器
 	MDAudioPlayerController *audioPlayer = [[MDAudioPlayerController alloc] initWithSoundFiles:songs atPath:[[NSBundle mainBundle] bundlePath] andSelectedIndex:indexPath.row];
+    
 	[self.navigationController presentModalViewController:audioPlayer animated:YES];
 	[audioPlayer release];
 }

@@ -20,7 +20,7 @@
         self.fileManagerOne=[NSFileManager defaultManager];
         [fileManagerOne createDirectoryAtPath:self.filePath withIntermediateDirectories:YES attributes:nil error:nil];
         [DocumentDirectorys release];
-        NSLog(@"%@",filePath);
+        NSLog(@"测试请暂时往路径中放置歌曲%@",filePath);
     }
     
     return self;

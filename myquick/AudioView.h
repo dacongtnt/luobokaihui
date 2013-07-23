@@ -15,6 +15,5 @@
 }
 
 @property (nonatomic, retain) NSMutableArray *fileArray;
-@property (nonatomic, retain) NSMutableArray *nameArray;
 @property(nonatomic,retain) UITableView *tableView;
 @end
