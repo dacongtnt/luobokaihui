@@ -7,7 +7,7 @@
 //
 
 #import "MusicCell.h"
-
+#import "MBAlertView.h"
 
 @implementation MusicCell
 @synthesize imgview;
@@ -71,6 +71,7 @@
     //若不存在文件和临时文件，则是新的下载
     HayateAppDelegate *appDelegate=APPDELEGETE;
     [appDelegate beginRequest:selectFileInfo isBeginDown:YES];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"jump" object:nil];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

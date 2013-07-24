@@ -139,6 +139,15 @@
 		72BFFD8D179D4BEC00764B07 /* music.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72BFFD8C179D4BEC00764B07 /* music.jpg */; };
 		72BFFD90179D4C5A00764B07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BFFD8F179D4C5A00764B07 /* AVFoundation.framework */; };
 		72BFFD92179D4C6700764B07 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BFFD91179D4C6700764B07 /* AudioToolbox.framework */; };
+		A77E93AB179FEA240026E388 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E9396179FEA240026E388 /* NSString+Trim.m */; };
+		A77E93AC179FEA240026E388 /* UIFont+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E9398179FEA240026E388 /* UIFont+Alert.m */; };
+		A77E93AD179FEA240026E388 /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E939A179FEA240026E388 /* UIView+Animations.m */; };
+		A77E93AE179FEA240026E388 /* MBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E939C179FEA240026E388 /* MBAlertView.m */; };
+		A77E93AF179FEA240026E388 /* MBHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E939E179FEA240026E388 /* MBHUDView.m */; };
+		A77E93B0179FEA240026E388 /* MBAlertViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E93A1179FEA240026E388 /* MBAlertViewItem.m */; };
+		A77E93B1179FEA240026E388 /* MBAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E93A6179FEA240026E388 /* MBAlertViewButton.m */; };
+		A77E93B2179FEA240026E388 /* MBCheckMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E93A8179FEA240026E388 /* MBCheckMarkView.m */; };
+		A77E93B3179FEA240026E388 /* MBSpinningCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E93AA179FEA240026E388 /* MBSpinningCircle.m */; };
 		A7A63A54179D4E1A00B04F46 /* MDAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */; };
 		A7A63A55179D4E1A00B04F46 /* MDAudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A63A53179D4E1A00B04F46 /* MDAudioPlayerController.m */; };
 		A7A63A59179D4EF300B04F46 /* AudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A63A58179D4EF300B04F46 /* AudioView.m */; };
@@ -397,6 +406,26 @@
 		72BFFD8C179D4BEC00764B07 /* music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music.jpg; sourceTree = "<group>"; };
 		72BFFD8F179D4C5A00764B07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		72BFFD91179D4C6700764B07 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A77E9395179FEA240026E388 /* NSString+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		A77E9396179FEA240026E388 /* NSString+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
+		A77E9397179FEA240026E388 /* UIFont+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Alert.h"; sourceTree = "<group>"; };
+		A77E9398179FEA240026E388 /* UIFont+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Alert.m"; sourceTree = "<group>"; };
+		A77E9399179FEA240026E388 /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
+		A77E939A179FEA240026E388 /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
+		A77E939B179FEA240026E388 /* MBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertView.h; sourceTree = "<group>"; };
+		A77E939C179FEA240026E388 /* MBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAlertView.m; sourceTree = "<group>"; };
+		A77E939D179FEA240026E388 /* MBHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHUDView.h; sourceTree = "<group>"; };
+		A77E939E179FEA240026E388 /* MBHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHUDView.m; sourceTree = "<group>"; };
+		A77E93A0179FEA240026E388 /* MBAlertViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertViewItem.h; sourceTree = "<group>"; };
+		A77E93A1179FEA240026E388 /* MBAlertViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAlertViewItem.m; sourceTree = "<group>"; };
+		A77E93A2179FEA240026E388 /* MBAlertViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertViewSubclass.h; sourceTree = "<group>"; };
+		A77E93A4179FEA240026E388 /* AlertViewUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewUI.h; sourceTree = "<group>"; };
+		A77E93A5179FEA240026E388 /* MBAlertViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAlertViewButton.h; sourceTree = "<group>"; };
+		A77E93A6179FEA240026E388 /* MBAlertViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAlertViewButton.m; sourceTree = "<group>"; };
+		A77E93A7179FEA240026E388 /* MBCheckMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCheckMarkView.h; sourceTree = "<group>"; };
+		A77E93A8179FEA240026E388 /* MBCheckMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCheckMarkView.m; sourceTree = "<group>"; };
+		A77E93A9179FEA240026E388 /* MBSpinningCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpinningCircle.h; sourceTree = "<group>"; };
+		A77E93AA179FEA240026E388 /* MBSpinningCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpinningCircle.m; sourceTree = "<group>"; };
 		A7A63A50179D4E1A00B04F46 /* MDAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAudioFile.h; path = myquick/MDAudioFile.h; sourceTree = "<group>"; };
 		A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAudioFile.m; path = myquick/MDAudioFile.m; sourceTree = "<group>"; };
 		A7A63A52179D4E1A00B04F46 /* MDAudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAudioPlayerController.h; path = myquick/MDAudioPlayerController.h; sourceTree = "<group>"; };
@@ -519,6 +548,7 @@
 		6BAC0ED01796330500090A21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A77E9393179FEA240026E388 /* MBAlertView */,
 				72BFFD91179D4C6700764B07 /* AudioToolbox.framework */,
 				72BFFD8F179D4C5A00764B07 /* AVFoundation.framework */,
 				6BAA29AD179CD7CF00714C1B /* QuartzCore.framework */,
@@ -789,6 +819,57 @@
 			path = ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
+		A77E9393179FEA240026E388 /* MBAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A77E9394179FEA240026E388 /* Categories */,
+				A77E939B179FEA240026E388 /* MBAlertView.h */,
+				A77E939C179FEA240026E388 /* MBAlertView.m */,
+				A77E939D179FEA240026E388 /* MBHUDView.h */,
+				A77E939E179FEA240026E388 /* MBHUDView.m */,
+				A77E939F179FEA240026E388 /* Protected */,
+				A77E93A3179FEA240026E388 /* Views */,
+			);
+			path = MBAlertView;
+			sourceTree = "<group>";
+		};
+		A77E9394179FEA240026E388 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A77E9395179FEA240026E388 /* NSString+Trim.h */,
+				A77E9396179FEA240026E388 /* NSString+Trim.m */,
+				A77E9397179FEA240026E388 /* UIFont+Alert.h */,
+				A77E9398179FEA240026E388 /* UIFont+Alert.m */,
+				A77E9399179FEA240026E388 /* UIView+Animations.h */,
+				A77E939A179FEA240026E388 /* UIView+Animations.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A77E939F179FEA240026E388 /* Protected */ = {
+			isa = PBXGroup;
+			children = (
+				A77E93A0179FEA240026E388 /* MBAlertViewItem.h */,
+				A77E93A1179FEA240026E388 /* MBAlertViewItem.m */,
+				A77E93A2179FEA240026E388 /* MBAlertViewSubclass.h */,
+			);
+			path = Protected;
+			sourceTree = "<group>";
+		};
+		A77E93A3179FEA240026E388 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A77E93A4179FEA240026E388 /* AlertViewUI.h */,
+				A77E93A5179FEA240026E388 /* MBAlertViewButton.h */,
+				A77E93A6179FEA240026E388 /* MBAlertViewButton.m */,
+				A77E93A7179FEA240026E388 /* MBCheckMarkView.h */,
+				A77E93A8179FEA240026E388 /* MBCheckMarkView.m */,
+				A77E93A9179FEA240026E388 /* MBSpinningCircle.h */,
+				A77E93AA179FEA240026E388 /* MBSpinningCircle.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A7A63A62179D4F2000B04F46 /* Music */ = {
 			isa = PBXGroup;
 			children = (
@@ -1038,6 +1119,15 @@
 				6BE0A4A3179E7D5C005B749C /* ASINSStringAdditions.m in Sources */,
 				6BE0A4A4179E7D5C005B749C /* NSHTTPCookieAdditions.m in Sources */,
 				6BE0A4A5179E7D5C005B749C /* Reachability.m in Sources */,
+				A77E93AB179FEA240026E388 /* NSString+Trim.m in Sources */,
+				A77E93AC179FEA240026E388 /* UIFont+Alert.m in Sources */,
+				A77E93AD179FEA240026E388 /* UIView+Animations.m in Sources */,
+				A77E93AE179FEA240026E388 /* MBAlertView.m in Sources */,
+				A77E93AF179FEA240026E388 /* MBHUDView.m in Sources */,
+				A77E93B0179FEA240026E388 /* MBAlertViewItem.m in Sources */,
+				A77E93B1179FEA240026E388 /* MBAlertViewButton.m in Sources */,
+				A77E93B2179FEA240026E388 /* MBCheckMarkView.m in Sources */,
+				A77E93B3179FEA240026E388 /* MBSpinningCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
