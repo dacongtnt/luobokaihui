@@ -45,8 +45,6 @@
 		6BAC0EE41796330500090A21 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC0EE31796330500090A21 /* Default.png */; };
 		6BAC0EE61796330500090A21 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC0EE51796330500090A21 /* Default@2x.png */; };
 		6BAC0EE81796330500090A21 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC0EE71796330500090A21 /* Default-568h@2x.png */; };
-		6BAC0EEB1796330500090A21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC0EEA1796330500090A21 /* ViewController.m */; };
-		6BAC0EEE1796330500090A21 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC0EEC1796330500090A21 /* ViewController.xib */; };
 		6BAC0F571796336B00090A21 /* DOAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC0EF61796336B00090A21 /* DOAutocompleteTextField.m */; };
 		6BAC0F581796336B00090A21 /* NSMutableArray+IMSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC0EF81796336B00090A21 /* NSMutableArray+IMSExtensions.m */; };
 		6BAC0F591796336B00090A21 /* NSMutableArray+MoveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC0EFA1796336B00090A21 /* NSMutableArray+MoveObject.m */; };
@@ -220,9 +218,6 @@
 		6BAC0EE31796330500090A21 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6BAC0EE51796330500090A21 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6BAC0EE71796330500090A21 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6BAC0EE91796330500090A21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6BAC0EEA1796330500090A21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6BAC0EED1796330500090A21 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		6BAC0EF51796336B00090A21 /* DOAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOAutocompleteTextField.h; sourceTree = "<group>"; };
 		6BAC0EF61796336B00090A21 /* DOAutocompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOAutocompleteTextField.m; sourceTree = "<group>"; };
 		6BAC0EF71796336B00090A21 /* NSMutableArray+IMSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+IMSExtensions.h"; sourceTree = "<group>"; };
@@ -552,9 +547,6 @@
 				6BAA29A9179CD6BE00714C1B /* SecondViewController.m */,
 				6BAC0EE01796330500090A21 /* AppDelegate.h */,
 				6BAC0EE11796330500090A21 /* AppDelegate.m */,
-				6BAC0EE91796330500090A21 /* ViewController.h */,
-				6BAC0EEA1796330500090A21 /* ViewController.m */,
-				6BAC0EEC1796330500090A21 /* ViewController.xib */,
 				6BAC0ED81796330500090A21 /* Supporting Files */,
 			);
 			path = myquick;
@@ -897,7 +889,6 @@
 				6BAC0EE41796330500090A21 /* Default.png in Resources */,
 				6BAC0EE61796330500090A21 /* Default@2x.png in Resources */,
 				6BAC0EE81796330500090A21 /* Default-568h@2x.png in Resources */,
-				6BAC0EEE1796330500090A21 /* ViewController.xib in Resources */,
 				72BFFD8D179D4BEC00764B07 /* music.jpg in Resources */,
 				A7A63A5E179D4F0900B04F46 /* 123.mp3 in Resources */,
 				A7A63A5F179D4F0900B04F46 /* me and you.mp3 in Resources */,
@@ -959,7 +950,6 @@
 			files = (
 				6BAC0EDE1796330500090A21 /* main.m in Sources */,
 				6BAC0EE21796330500090A21 /* AppDelegate.m in Sources */,
-				6BAC0EEB1796330500090A21 /* ViewController.m in Sources */,
 				6BAC0F571796336B00090A21 /* DOAutocompleteTextField.m in Sources */,
 				6BAC0F581796336B00090A21 /* NSMutableArray+IMSExtensions.m in Sources */,
 				6BAC0F591796336B00090A21 /* NSMutableArray+MoveObject.m in Sources */,
@@ -1060,14 +1050,6 @@
 				6BAC0EDB1796330500090A21 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6BAC0EEC1796330500090A21 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BAC0EED1796330500090A21 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
