@@ -168,7 +168,7 @@
         cell.fileInfo=fileInfo;
         cell.request=theRequest;
         cell.fileCurrentSize.text=[CommonHelper getFileSizeString:fileInfo.fileReceivedSize];
-        cell.filebaifen.text=[CommonHelper getFileSizeString:fileInfo.fileReceivedSize]/fileInfo.fileSize
+//        cell.filebaifen.text=[CommonHelper getFileSizeString:fileInfo.fileReceivedSize]/fileInfo.fileSize
         [cell.progress setProgress:[CommonHelper getProgress:[CommonHelper getFileSizeNumber:fileInfo.fileSize] currentSize:[fileInfo.fileReceivedSize floatValue]]];
         if(fileInfo.isDownloading==YES)//文件正在下载
         {
