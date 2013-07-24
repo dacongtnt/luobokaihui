@@ -23,9 +23,10 @@
     
     Memo *mymemo=[[Memo alloc]init];
     
-    self.tableView=[[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 460) style:UITableViewStylePlain]autorelease];
+    self.tableView=[[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 420) style:UITableViewStylePlain]autorelease];
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
+    self.tableView.rowHeight=50;
     
 	self.fileArray = [[NSMutableArray alloc]initWithArray:[mymemo loadOldFile]];
     

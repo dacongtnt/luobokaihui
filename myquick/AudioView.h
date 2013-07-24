@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
 
-@interface AudioView : RootViewController<UITableViewDelegate,UITextViewDelegate>
+@interface AudioView : RootViewController<UITableViewDelegate,UITextViewDelegate,UITableViewDataSource>
 {
 	NSMutableArray *fileArray;
 }
