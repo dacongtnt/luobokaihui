@@ -248,6 +248,8 @@
     //    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
     //    self.window.rootViewController = self.viewController;
     
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     self.root=[Login create];
     UINavigationController *nav=[QuickDialogController controllerWithNavigationForRoot:self.root];
     

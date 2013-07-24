@@ -7,7 +7,7 @@
 //
 
 #import "CommonHelper.h"
-
+#import "Memo.h"
 
 @implementation CommonHelper
 
@@ -53,7 +53,7 @@
 
 +(NSString *)getDocumentPath
 {
-    return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Songs"];
 }
 
 +(NSString *)getTargetFloderPath
@@ -63,7 +63,8 @@
 
 +(NSString *)getTempFolderPath
 {
-    return [[self getDocumentPath] stringByAppendingPathComponent:@"Temp"];
+    Memo *mymemo=[[Memo alloc] init];
+    return [mymemo.filePath stringByAppendingPathComponent:@"Temp"];
 }
 
 +(BOOL)isExistFile:(NSString *)fileName

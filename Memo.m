@@ -16,7 +16,7 @@
     self=[super init];
     if (self) {
         NSString *DocumentDirectorys=[[NSString alloc] initWithString:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]];
-        self.filePath=[[NSString alloc] initWithString:[DocumentDirectorys stringByAppendingPathComponent:@"Memo"]];
+        self.filePath=[[NSString alloc] initWithString:[DocumentDirectorys stringByAppendingPathComponent:@"Songs"]];
         self.fileManagerOne=[NSFileManager defaultManager];
         [fileManagerOne createDirectoryAtPath:self.filePath withIntermediateDirectories:YES attributes:nil error:nil];
         [DocumentDirectorys release];
