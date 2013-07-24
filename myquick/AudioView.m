@@ -30,7 +30,6 @@
     
 	self.fileArray = [[NSMutableArray alloc]initWithArray:[mymemo loadOldFile]];
     NSLog(@"%@",self.fileArray);
-    [fileArray removeObjectAtIndex:0];
     
     
     [self.view addSubview:self.tableView];
@@ -90,9 +89,11 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSString *removeName=[NSString stringWithFormat:@"%@", [self.fileArray objectAtIndex:indexPath.row]];
         [fileArray removeObjectAtIndex:indexPath.row];
         Memo *mymemo=[[Memo alloc] init];
-        [mymemo deleteOldFile:[fileArray objectAtIndex:indexPath.row]];
+        [mymemo deleteOldFile:removeName];
+        NSLog(@"%@",removeName);
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {

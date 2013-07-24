@@ -43,6 +43,7 @@
 }
 -(void)deleteOldFile:(NSString*)fileName
 {
-    [fileManagerOne removeItemAtPath:[filePath stringByAppendingString:fileName] error:nil];
+    NSString *removeName=[filePath stringByAppendingString:[@"/"stringByAppendingString:fileName]];
+    [fileManagerOne removeItemAtPath:removeName error:nil];
 }
 @end
