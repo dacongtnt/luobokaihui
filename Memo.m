@@ -28,8 +28,7 @@
 
 -(void)dealloc
 {
-    [filePath release];
-    filePath=nil;
+    MCRelease(filePath);
     [super dealloc];
 }
 

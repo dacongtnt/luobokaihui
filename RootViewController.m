@@ -78,7 +78,7 @@
             __block  RESideMenuItem *exploreItem=nil;
             dispatch_sync(myQueue, ^{
                 secondViewController = [[DownloadViewController alloc] init];
-                exploreItem = [[RESideMenuItem alloc] initWithTitle:@"已下载的音乐" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                exploreItem = [[RESideMenuItem alloc] initWithTitle:@"正在下载的音乐" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     secondViewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
                     [menu setRootViewController:navigationController];

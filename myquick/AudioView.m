@@ -29,6 +29,8 @@
     self.tableView.rowHeight=50;
     
 	self.fileArray = [[NSMutableArray alloc]initWithArray:[mymemo loadOldFile]];
+    NSLog(@"%@",self.fileArray);
+    [fileArray removeObjectAtIndex:0];
     
     
     [self.view addSubview:self.tableView];
@@ -71,8 +73,12 @@
         cell.showsReorderControl=YES;
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
+
 	cell.textLabel.text = [[NSString stringWithFormat:@"%@", [self.fileArray objectAtIndex:indexPath.row]] stringByDeletingPathExtension];
+    
     return cell;
+    
+    
     
 }
 
@@ -85,6 +91,8 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [fileArray removeObjectAtIndex:indexPath.row];
+        Memo *mymemo=[[Memo alloc] init];
+        [mymemo deleteOldFile:[fileArray objectAtIndex:indexPath.row]];
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -97,6 +105,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    
     CGContextRef *context=UIGraphicsGetCurrentContext();
     [UIView beginAnimations:@"curl" context:context];
     [UIView setAnimationDuration:0.5];
@@ -117,7 +128,7 @@
 		[songs addObject:audioFile];
 	}
     //添加控制器
-	MDAudioPlayerController *audioPlayer = [[MDAudioPlayerController alloc] initWithSoundFiles:songs atPath:[[NSBundle mainBundle] bundlePath] andSelectedIndex:indexPath.row];
+	MDAudioPlayerController *audioPlayer = [[MDAudioPlayerController alloc] initWithSoundFiles:songs atPath:mymemo.filePath andSelectedIndex:indexPath.row];
     
 	[self.navigationController presentModalViewController:audioPlayer animated:YES];
 	[audioPlayer release];

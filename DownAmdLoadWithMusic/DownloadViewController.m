@@ -28,12 +28,14 @@
 -(void)showFinished
 {
     [self startFlipAnimation:0];
+    self.title=@"已下载的音乐";
     self.navigationItem.rightBarButtonItem=[[[UIBarButtonItem alloc]initWithTitle:@"正在下载的文件" style:UIBarButtonItemStylePlain target:self action:@selector(showDowning)]autorelease];
 }
 
 -(void)showDowning
 {
     [self startFlipAnimation:1];
+    self.title=@"正在下载的音乐";
     self.navigationItem.rightBarButtonItem=[[[UIBarButtonItem alloc]initWithTitle:@"已下载的文件" style:UIBarButtonItemStylePlain target:self action:@selector(showFinished)]autorelease];
 }
 
