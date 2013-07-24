@@ -253,6 +253,8 @@
     self.root=[Login create];
     UINavigationController *nav=[QuickDialogController controllerWithNavigationForRoot:self.root];
     
+    [nav.navigationBar setBarStyle:UIBarStyleBlack];
+    
     self.isFistLoadSound=YES;
     [self playButtonSound];
     [self playDownloadSound];

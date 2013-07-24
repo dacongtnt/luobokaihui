@@ -15,7 +15,6 @@
 }
 @property(nonatomic,retain)IBOutlet UILabel *fileNameLabel;
 @property(nonatomic,retain)IBOutlet UILabel *fileSizeLabel;
-@property (nonatomic,retain)UILabel *fileLabel;
 @property(nonatomic,retain)UIImageView *img;
 @property(nonatomic,retain)IBOutlet FileModel *fileInfo;
 @end

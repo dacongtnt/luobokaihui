@@ -171,11 +171,11 @@
         [cell.progress setProgress:[CommonHelper getProgress:[CommonHelper getFileSizeNumber:fileInfo.fileSize] currentSize:[fileInfo.fileReceivedSize floatValue]]];
         if(fileInfo.isDownloading==YES)//文件正在下载
         {
-            [cell.operateButton setBackgroundImage:[UIImage imageNamed:@"downloading_go.png"] forState:UIControlStateNormal];
+            [cell.operateButton setBackgroundImage:[UIImage imageNamed:@"xiazai.png"] forState:UIControlStateNormal];
         }
         else
         {
-            [cell.operateButton setBackgroundImage:[UIImage imageNamed:@"downloading_stop.png"] forState:UIControlStateNormal];
+            [cell.operateButton setBackgroundImage:[UIImage imageNamed:@"Pause3.png"] forState:UIControlStateNormal];
         }
         return cell;
     }

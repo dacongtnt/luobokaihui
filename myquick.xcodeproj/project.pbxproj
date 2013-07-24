@@ -16,6 +16,10 @@
 		027B1D72179E86EF00AB5EBF /* pause.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D6B179E86EF00AB5EBF /* pause.jpg */; };
 		027B1D76179E878A00AB5EBF /* download1.png in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D74179E878A00AB5EBF /* download1.png */; };
 		027B1D77179E878A00AB5EBF /* OK2.png in Resources */ = {isa = PBXBuildFile; fileRef = 027B1D75179E878A00AB5EBF /* OK2.png */; };
+		02AABBEC179FAA6200F52E1A /* download 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AABBE8179FAA6200F52E1A /* download 1.png */; };
+		02AABBED179FAA6200F52E1A /* downloaded.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AABBE9179FAA6200F52E1A /* downloaded.png */; };
+		02AABBEF179FAA6200F52E1A /* xiazai.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AABBEB179FAA6200F52E1A /* xiazai.png */; };
+		02AABBF2179FB14800F52E1A /* Pause3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AABBF1179FB14600F52E1A /* Pause3.png */; };
 		6BA2715C179A56CB0035AA75 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715B179A56CB0035AA75 /* CFNetwork.framework */; };
 		6BA2715E179A56D80035AA75 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715D179A56D80035AA75 /* SystemConfiguration.framework */; };
 		6BA27160179A56E40035AA75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715F179A56E40035AA75 /* MobileCoreServices.framework */; };
@@ -98,7 +102,6 @@
 		6BE0A20D179E6055005B749C /* baidu_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0A1C0179E6055005B749C /* baidu_bar.png */; };
 		6BE0A20E179E6055005B749C /* baidu_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0A1C1179E6055005B749C /* baidu_bg.jpg */; };
 		6BE0A20F179E6055005B749C /* baidu_downbutton_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0A1C2179E6055005B749C /* baidu_downbutton_bg.png */; };
-		6BE0A210179E6055005B749C /* baidu_musicLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0A1C3179E6055005B749C /* baidu_musicLogo.png */; };
 		6BE0A219179E6055005B749C /* download_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0A1D1179E6055005B749C /* download_bar.png */; };
 		6BE0A21A179E6055005B749C /* download_rowlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0A1D2179E6055005B749C /* download_rowlogo.png */; };
 		6BE0A21D179E6055005B749C /* downloading_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0A1D7179E6055005B749C /* downloading_bg.jpg */; };
@@ -174,6 +177,10 @@
 		027B1D6B179E86EF00AB5EBF /* pause.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pause.jpg; sourceTree = "<group>"; };
 		027B1D74179E878A00AB5EBF /* download1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download1.png; sourceTree = "<group>"; };
 		027B1D75179E878A00AB5EBF /* OK2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OK2.png; sourceTree = "<group>"; };
+		02AABBE8179FAA6200F52E1A /* download 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download 1.png"; sourceTree = "<group>"; };
+		02AABBE9179FAA6200F52E1A /* downloaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downloaded.png; sourceTree = "<group>"; };
+		02AABBEB179FAA6200F52E1A /* xiazai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiazai.png; sourceTree = "<group>"; };
+		02AABBF1179FB14600F52E1A /* Pause3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause3.png; sourceTree = "<group>"; };
 		6BA2715B179A56CB0035AA75 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6BA2715D179A56D80035AA75 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6BA2715F179A56E40035AA75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -325,7 +332,6 @@
 		6BE0A1C0179E6055005B749C /* baidu_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baidu_bar.png; path = ../DownAmdLoadWithMusic/baidu_bar.png; sourceTree = "<group>"; };
 		6BE0A1C1179E6055005B749C /* baidu_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = baidu_bg.jpg; path = ../DownAmdLoadWithMusic/baidu_bg.jpg; sourceTree = "<group>"; };
 		6BE0A1C2179E6055005B749C /* baidu_downbutton_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baidu_downbutton_bg.png; path = ../DownAmdLoadWithMusic/baidu_downbutton_bg.png; sourceTree = "<group>"; };
-		6BE0A1C3179E6055005B749C /* baidu_musicLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baidu_musicLogo.png; path = ../DownAmdLoadWithMusic/baidu_musicLogo.png; sourceTree = "<group>"; };
 		6BE0A1D1179E6055005B749C /* download_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = download_bar.png; path = ../DownAmdLoadWithMusic/download_bar.png; sourceTree = "<group>"; };
 		6BE0A1D2179E6055005B749C /* download_rowlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = download_rowlogo.png; path = ../DownAmdLoadWithMusic/download_rowlogo.png; sourceTree = "<group>"; };
 		6BE0A1D7179E6055005B749C /* downloading_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = downloading_bg.jpg; path = ../DownAmdLoadWithMusic/downloading_bg.jpg; sourceTree = "<group>"; };
@@ -452,6 +458,10 @@
 		027B1D64179E86EF00AB5EBF /* Downloadimage */ = {
 			isa = PBXGroup;
 			children = (
+				02AABBF1179FB14600F52E1A /* Pause3.png */,
+				02AABBE8179FAA6200F52E1A /* download 1.png */,
+				02AABBE9179FAA6200F52E1A /* downloaded.png */,
+				02AABBEB179FAA6200F52E1A /* xiazai.png */,
 				027B1D74179E878A00AB5EBF /* download1.png */,
 				027B1D75179E878A00AB5EBF /* OK2.png */,
 				027B1D65179E86EF00AB5EBF /* background.jpg */,
@@ -805,7 +815,6 @@
 				6BE0A1C0179E6055005B749C /* baidu_bar.png */,
 				6BE0A1C1179E6055005B749C /* baidu_bg.jpg */,
 				6BE0A1C2179E6055005B749C /* baidu_downbutton_bg.png */,
-				6BE0A1C3179E6055005B749C /* baidu_musicLogo.png */,
 				6BE0A1D1179E6055005B749C /* download_bar.png */,
 				6BE0A1D2179E6055005B749C /* download_rowlogo.png */,
 				6BE0A1D7179E6055005B749C /* downloading_bg.jpg */,
@@ -914,7 +923,6 @@
 				6BE0A20D179E6055005B749C /* baidu_bar.png in Resources */,
 				6BE0A20E179E6055005B749C /* baidu_bg.jpg in Resources */,
 				6BE0A20F179E6055005B749C /* baidu_downbutton_bg.png in Resources */,
-				6BE0A210179E6055005B749C /* baidu_musicLogo.png in Resources */,
 				6BE0A219179E6055005B749C /* download_bar.png in Resources */,
 				6BE0A21A179E6055005B749C /* download_rowlogo.png in Resources */,
 				6BE0A21D179E6055005B749C /* downloading_bg.jpg in Resources */,
@@ -935,6 +943,10 @@
 				027B1D72179E86EF00AB5EBF /* pause.jpg in Resources */,
 				027B1D76179E878A00AB5EBF /* download1.png in Resources */,
 				027B1D77179E878A00AB5EBF /* OK2.png in Resources */,
+				02AABBEC179FAA6200F52E1A /* download 1.png in Resources */,
+				02AABBED179FAA6200F52E1A /* downloaded.png in Resources */,
+				02AABBEF179FAA6200F52E1A /* xiazai.png in Resources */,
+				02AABBF2179FB14800F52E1A /* Pause3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
