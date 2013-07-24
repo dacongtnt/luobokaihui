@@ -49,6 +49,9 @@
                 homeItem = [[RESideMenuItem alloc] initWithTitle:@"音乐播放器" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     viewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+                    
+                    [navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+
                     [menu setRootViewController:navigationController];
                 }];
             });
@@ -65,6 +68,8 @@
                 exploreItem = [[RESideMenuItem alloc] initWithTitle:@"音乐下载" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     secondViewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    [navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+
                     [menu setRootViewController:navigationController];
                 }];
             });
@@ -81,6 +86,9 @@
                 exploreItem = [[RESideMenuItem alloc] initWithTitle:@"正在下载的音乐" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     secondViewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    
+                    [navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+
                     [menu setRootViewController:navigationController];
                 }];
             });
@@ -97,6 +105,9 @@
                 activityItem = [[RESideMenuItem alloc] initWithTitle:@"录音" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     secondViewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    
+                    [navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+
                     [menu setRootViewController:navigationController];
                 }];
             });
@@ -113,6 +124,9 @@
                 profileItem = [[RESideMenuItem alloc] initWithTitle:@"关于我们" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     secondViewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+                    
+                    [navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+
                     [menu setRootViewController:navigationController];
                 }];
             });

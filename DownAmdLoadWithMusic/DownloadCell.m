@@ -17,6 +17,7 @@
 @synthesize fileSize;
 @synthesize operateButton;
 @synthesize request;
+@synthesize filebaifen;
 
 - (void)dealloc
 {
@@ -24,6 +25,7 @@
     [operateButton release];
     [fileName release];
     [fileCurrentSize release];
+    [filebaifen release];
     [fileSize release];
     [progress release];
     [fileInfo release];
@@ -37,7 +39,7 @@
     FileModel *downFile=((DownloadCell *)[[[btnOperate superview] superview]superview]).fileInfo;
     if(downFile.isDownloading)//文件正在下载，点击之后暂停下载
     {
-        [operateButton setBackgroundImage:[UIImage imageNamed:@"downloading_stop.png"] forState:UIControlStateNormal];
+        [operateButton setBackgroundImage:[UIImage imageNamed:@"xiazai.png"] forState:UIControlStateNormal];
         downFile.isDownloading=NO;
         [request cancel];
         [request release];
@@ -45,7 +47,7 @@
     }
     else
     {
-        [operateButton setBackgroundImage:[UIImage imageNamed:@"downloading_go.png"] forState:UIControlStateNormal];
+        [operateButton setBackgroundImage:[UIImage imageNamed:@"Pause3.png"] forState:UIControlStateNormal];
         downFile.isDownloading=YES;
         [appDelegate beginRequest:downFile isBeginDown:YES];
     }

@@ -17,6 +17,7 @@
     IBOutlet UILabel *fileName;
     IBOutlet UILabel *fileCurrentSize;
     IBOutlet UILabel *fileSize;
+    IBOutlet UILabel *filebaifen;
     IBOutlet UIButton *operateButton;
 }
 
@@ -25,6 +26,9 @@
 @property(nonatomic,retain)IBOutlet UILabel *fileName;
 @property(nonatomic,retain)IBOutlet UILabel *fileCurrentSize;
 @property(nonatomic,retain)IBOutlet UILabel *fileSize;
+@property(nonatomic,retain)IBOutlet UILabel *filebaifen;
+
+
 @property(nonatomic,retain)IBOutlet UIButton *operateButton;
 @property(nonatomic,retain)ASIHTTPRequest *request;//该文件发起的请求
 

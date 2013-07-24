@@ -187,13 +187,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImageView *img=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background4.jpg"]];
-    img.alpha=0.3;
-    self.musicTable.backgroundView=img;
-    [img release];
+//    UIImageView *img=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background4.jpg"]];
+//    img.alpha=0.3;
+//    self.musicTable.backgroundView=img;
+//    [img release];
     self.connList=[[[NSMutableArray alloc] init] autorelease];
     self.navigationItem.rightBarButtonItem=[[[UIBarButtonItem alloc]initWithTitle:@"音乐搜索" style:UIBarButtonItemStylePlain target:self action:@selector(showSearchBar)]autorelease];
-    //    [self searchMusicByMusicName:@"不分手的恋爱"];
 }
 
 - (void)viewDidUnload

@@ -148,11 +148,6 @@
     [self.downinglist addObject:request];
 }
 
--(void)cancelRequest:(ASIHTTPRequest *)request
-{
-    
-}
-
 -(void)loadTempfiles
 {
     self.downinglist=[[[NSMutableArray alloc] init] autorelease];
@@ -244,14 +239,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    //    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    //    self.window.rootViewController = self.viewController;
-    
+  
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     self.root=[Login create];
     UINavigationController *nav=[QuickDialogController controllerWithNavigationForRoot:self.root];
+    
+    [nav.navigationBar setBarStyle:UIBarStyleBlack];
     
     self.isFistLoadSound=YES;
     [self playButtonSound];
@@ -264,9 +258,7 @@
     [self.window addSubview:nav.view];
     self.window.rootViewController=nav;
     
-    //    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[DemoViewController alloc] init]];
-    //    self.window.backgroundColor = [UIColor whiteColor];
-    
+   
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -293,27 +285,6 @@
     fileInfo.fileSize=[CommonHelper getFileSizeString:[[request responseHeaders] objectForKey:@"Content-Length"]];
 }
 
-////*********
-//**注意：如果要要ASIHttpRequest自动断点续传，则不需要写上该方法，整个过程ASIHttpRequest会自动识别URL进行保存数据的
-//如果设置了该方法，ASIHttpRequest则不会响应断点续传功能，需要自己手动写入接收到的数据，开始不明白原理，搞了很久才明白，如果本人理解不正确的话，请高人及时指点啊^_^QQ:1023217825
-//***********
-//-(void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data
-//{
-//    FileModel *fileInfo=(FileModel *)[request.userInfo objectForKey:@"File"];
-//    [fileInfo.fileReceivedData appendData:data];
-//    fileInfo.fileReceivedSize=[NSString stringWithFormat:@"%d",[fileInfo.fileReceivedData length]];
-//    [fileInfo.fileReceivedData writeToFile:request.temporaryFileDownloadPath atomically:NO];
-//    NSString *configPath=[[CommonHelper getTempFolderPath] stringByAppendingPathComponent:[fileInfo.fileName stringByAppendingString:@".rtf"]];
-//    NSString *tmpConfigMsg=[NSString stringWithFormat:@"%@,%@,%@,%@",fileInfo.fileName,fileInfo.fileSize,fileInfo.fileReceivedSize,fileInfo.fileURL];
-//    NSError *error;
-//    [tmpConfigMsg writeToFile:configPath atomically:YES encoding:NSUTF8StringEncoding error:&error];
-//    if(!error)
-//    {
-//        NSLog(@"错误%@",[error description]);
-//    }
-//    [self.downloadDelegate updateCellProgress:fileInfo];
-//    NSLog(@"正在接受搜数据%d",[fileInfo.fileReceivedData length]);
-//}
 
 //1.实现ASIProgressDelegate委托，在此实现UI的进度条更新,这个方法必须要在设置[request setDownloadProgressDelegate:self];之后才会运行
 //2.这里注意第一次返回的bytes是已经下载的长度，以后便是每次请求数据的大小
@@ -357,31 +328,6 @@
     [request release];
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
 
 @end
