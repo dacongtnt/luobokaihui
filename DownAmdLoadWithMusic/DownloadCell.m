@@ -17,6 +17,7 @@
 @synthesize fileSize;
 @synthesize operateButton;
 @synthesize request;
+@synthesize filebaifen;
 
 - (void)dealloc
 {
@@ -24,6 +25,7 @@
     [operateButton release];
     [fileName release];
     [fileCurrentSize release];
+    [filebaifen release];
     [fileSize release];
     [progress release];
     [fileInfo release];

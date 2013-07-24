@@ -12,19 +12,37 @@
 @implementation CommonHelper
 
 
++(NSString *)notRounding:(float)price afterPoint:(int)position{
+    NSDecimalNumberHandler* roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    NSDecimalNumber *ouncesDecimal;
+    NSDecimalNumber *roundedOunces;
+    
+    ouncesDecimal = [[NSDecimalNumber alloc] initWithFloat:price];
+    roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
+    [ouncesDecimal release];
+    return [NSString stringWithFormat:@"%@",roundedOunces];
+}
 +(NSString *)getFileSizeString:(NSString *)size
 {
     if([size floatValue]>=1024*1024)//大于1M，则转化成M单位的字符串
     {
-        return [NSString stringWithFormat:@"%fM",[size floatValue]/1024/1024];
+        float f=[size floatValue]/1024/1024;
+        NSString *sv=[self notRounding:f afterPoint:2];
+        return [sv stringByAppendingString:@"MB"];
+        
     }
     else if([size floatValue]>=1024&&[size floatValue]<1024*1024) //不到1M,但是超过了1KB，则转化成KB单位
     {
-        return [NSString stringWithFormat:@"%fK",[size floatValue]/1024];
+        
+        float k=[size floatValue]/1024;
+        NSString *fk=[self notRounding:k afterPoint:2];
+        return [fk stringByAppendingString:@"KB"];
     }
     else//剩下的都是小于1K的，则转化成B单位
     {
-        return [NSString stringWithFormat:@"%fB",[size floatValue]];
+        float b=[size floatValue]/1024;
+        NSString *bk=[self notRounding:b afterPoint:2];
+        return [bk stringByAppendingString:@"B"];
     }
 }
 
