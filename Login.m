@@ -19,21 +19,26 @@
     
     QRootElement *root = [[QRootElement alloc] init];
     root.controllerName = @"LoginController";
-    root.grouped = YES;
-    root.title = @"Login";
+//    root.grouped = YES;
+    root.title = @"登陆";
     
     QSection *main = [[QSection alloc] init];
     main.headerImage = @"logo";
     
+    for (int i=0; i<3; i++) {
+        QLabelElement *label=[[QLabelElement alloc] init];
+        [main addElement:label];
+    }
+    
     QEntryElement *login = [[QEntryElement alloc] init];
-    login.title = @"用户名：";
+    login.title = @"      用户名：";
     login.key = @"login";
     login.hiddenToolbar = YES;
     login.placeholder = @"User Name";
     [main addElement:login];
     
     QEntryElement *password = [[QEntryElement alloc] init];
-    password.title = @"密码：";
+    password.title = @"        密码：";
     password.key = @"password";
     password.secureTextEntry = YES;
     password.hiddenToolbar = YES;
@@ -43,8 +48,13 @@
     [root addSection:main];
     
     QSection *btSection = [[QSection alloc] init];
+    
+    QLabelElement *labelb=[[QLabelElement alloc] init];
+    [btSection addElement:labelb];
+
+    
     QButtonElement *btLogin = [[QButtonElement alloc] init];
-    btLogin.title = @"Login";
+    btLogin.title = @"登陆";
     btLogin.controllerAction = @"onLogin:";
     [btSection addElement:btLogin];
     [btLogin setImage:[UIImage imageNamed:@""]];
