@@ -57,7 +57,7 @@
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										<object class="NSCustomResource" key="IBUIImage">
 											<string key="NSClassName">NSImage</string>
-											<string key="NSResourceName">downloaded.png</string>
+											<string key="NSResourceName">duihao2.png</string>
 										</object>
 									</object>
 									<object class="IBUILabel" id="808027739">
@@ -100,6 +100,7 @@
 										<string key="NSFrame">{{148, 38}, {113, 21}}</string>
 										<reference key="NSSuperview" ref="952454728"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<int key="IBUIContentMode">7</int>
@@ -790,8 +791,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">downloaded.png</string>
-			<string key="NS.object.0">{48, 42}</string>
+			<string key="NS.key.0">duihao2.png</string>
+			<string key="NS.object.0">{81, 73}</string>
 		</object>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">1926</string>
