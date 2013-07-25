@@ -125,19 +125,19 @@
     [self.downloadingTable reloadData];
     [self.finishedTable reloadData];
     
-    UIImageView *downingImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background3.jpg"]];
-    downingImg.alpha=0.3f;
-    self.downloadingTable.backgroundView=downingImg;
-    [downingImg release];
-    
-    UIImageView *finishedImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finished_bg.jpg"]];
-    finishedImg.alpha=0.3f;
-    self.finishedTable.backgroundView=finishedImg;
-    [finishedImg release];
+//    UIImageView *downingImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background3.jpg"]];
+//    downingImg.alpha=0.3f;
+//    self.downloadingTable.backgroundView=downingImg;
+//    [downingImg release];
+//    
+//    UIImageView *finishedImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"finished_bg.jpg"]];
+//    finishedImg.alpha=0.3f;
+//    self.finishedTable.backgroundView=finishedImg;
+//    [finishedImg release];
     
     self.navigationItem.rightBarButtonItem=[[[UIBarButtonItem alloc]initWithTitle:@"已下载的文件" style:UIBarButtonItemStylePlain target:self action:@selector(showFinished)]autorelease];
 //    self.navigationItem.leftBarButtonItem=[[[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(enterEdit)]autorelease];
-    
+    l
 }
 
 - (void)viewDidUnload
