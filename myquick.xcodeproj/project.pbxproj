@@ -96,6 +96,7 @@
 		6BAC0F871796343B00090A21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAC0F861796343B00090A21 /* MapKit.framework */; };
 		6BAC0F891796344500090A21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAC0F881796344500090A21 /* CoreLocation.framework */; };
 		6BB77FF917A0BAE3001D22C3 /* HayateAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77FF817A0BAE3001D22C3 /* HayateAppDelegate.m */; };
+		6BB7804A17A12E9C001D22C3 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7804917A12E9C001D22C3 /* LoginController.m */; };
 		6BC2D9861799130B00E2D9CA /* LoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9851799130B00E2D9CA /* LoginInfo.m */; };
 		6BC2D98D17991A1500E2D9CA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D98C17991A1500E2D9CA /* Login.m */; };
 		6BC2D9941799369000E2D9CA /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9931799369000E2D9CA /* JSONKit.m */; };
@@ -331,6 +332,8 @@
 		6BAC0F881796344500090A21 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6BB77FF717A0BAE3001D22C3 /* HayateAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HayateAppDelegate.h; path = ../HayateAppDelegate.h; sourceTree = "<group>"; };
 		6BB77FF817A0BAE3001D22C3 /* HayateAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HayateAppDelegate.m; path = ../HayateAppDelegate.m; sourceTree = "<group>"; };
+		6BB7804817A12E9C001D22C3 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		6BB7804917A12E9C001D22C3 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		6BC2D9841799130B00E2D9CA /* LoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInfo.h; sourceTree = "<group>"; };
 		6BC2D9851799130B00E2D9CA /* LoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInfo.m; sourceTree = "<group>"; };
 		6BC2D98B17991A1500E2D9CA /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
@@ -724,6 +727,8 @@
 		6BC2D996179936B300E2D9CA /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				6BB7804817A12E9C001D22C3 /* LoginController.h */,
+				6BB7804917A12E9C001D22C3 /* LoginController.m */,
 				6BA2718E179A83010035AA75 /* Memo.h */,
 				6BA2718F179A83010035AA75 /* Memo.m */,
 				6BC2D98B17991A1500E2D9CA /* Login.h */,
@@ -1130,6 +1135,7 @@
 				72A2CBB117A0F580004AFF51 /* HsTable.m in Sources */,
 				72A2CBB517A0F5DB004AFF51 /* HsData.m in Sources */,
 				72A2CBB817A0F621004AFF51 /* HsCell.m in Sources */,
+				6BB7804A17A12E9C001D22C3 /* LoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
