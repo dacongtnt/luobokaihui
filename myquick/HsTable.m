@@ -75,10 +75,13 @@
     tableView0=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 440) style:UITableViewStylePlain];
     tableView0.delegate=self;
     tableView0.dataSource=self;
-    tableView0.rowHeight=70;
+    tableView0.rowHeight=60;
     tableView0.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:tableView0];
     self.navigationItem.title=@"语音备忘录";
+    
+    dateformatter=[[NSDateFormatter alloc]init];
+    dateformatter.dateFormat=@"YYYY-MM-dd hh:mm:ss";
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,8 +102,10 @@
     if (cell==nil) {
         cell=[[HsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
     }
-    cell.labelTitle.text=[files lastObject];
+    cell.labelTitle.text=[files objectAtIndex:indexPath.row];
     cell.labelTime.text=[NSString stringWithFormat:@"%d:%02d", (int)[avPlayer duration] / 60, (int)[avPlayer duration] % 60, nil];
+    cell.labelDate.text=[dateformatter stringFromDate:[NSDate date]];
+    
     return cell;
 }
 
@@ -113,7 +118,7 @@
     [avPlayer play];
     
     //歌曲时间
-    NSString *current=[NSString stringWithFormat:@"%d:%02d", (int)[avPlayer duration] / 60, (int)[avPlayer duration] % 60, nil];
+    NSString *current=[NSString stringWithFormat:@"%0d:%0d", (int)[avPlayer duration] / 60,(int)[avPlayer duration] % 60, nil];
     allTime.text=current;
     
     [self.view addSubview:view];

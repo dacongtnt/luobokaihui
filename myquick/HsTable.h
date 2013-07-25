@@ -22,6 +22,7 @@
     UIView *view;
     UILabel *currentTime;
     UILabel *allTime;
+    NSDateFormatter *dateformatter;
 }
 
 @end
