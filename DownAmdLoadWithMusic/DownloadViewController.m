@@ -137,8 +137,7 @@
     
     self.navigationItem.rightBarButtonItem=[[[UIBarButtonItem alloc]initWithTitle:@"已下载的文件" style:UIBarButtonItemStylePlain target:self action:@selector(showFinished)]autorelease];
 //    self.navigationItem.leftBarButtonItem=[[[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(enterEdit)]autorelease];
-    l
-}
+    }
 
 - (void)viewDidUnload
 {
