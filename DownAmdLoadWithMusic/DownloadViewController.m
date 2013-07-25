@@ -90,7 +90,30 @@
     HayateAppDelegate *appDelegate=APPDELEGETE;
     appDelegate.downloadDelegate=self;
     self.downingList=appDelegate.downinglist;
-    self.finishedList=appDelegate.finishedlist;
+//    self.finishedList=appDelegate.finishedlist;
+    self.finishedList=[[[NSMutableArray alloc] init] autorelease];
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    NSError *error;
+    NSArray *filelist=[fileManager contentsOfDirectoryAtPath:[CommonHelper getTargetFloderPath] error:&error];
+    if(!error)
+    {
+        NSLog(@"%@",[error description]);
+    }
+    for(NSString *fileName in filelist)
+    {
+        if([fileName rangeOfString:@"."].location<100)//出去Temp文件夹
+        {
+            FileModel *finishedFile=[[FileModel alloc] init];
+            finishedFile.fileName=fileName;
+            
+            //根据文件名获取文件的大小
+            NSInteger length=[[fileManager contentsAtPath:[[CommonHelper getTargetFloderPath] stringByAppendingPathComponent:fileName]] length];
+            finishedFile.fileSize=[CommonHelper getFileSizeString:[NSString stringWithFormat:@"%d",length]];
+            
+            [self.finishedList addObject:finishedFile];
+            [finishedFile release];
+        }
+    }
     [self.downloadingTable reloadData];
     [self.finishedTable reloadData];
 }
@@ -98,6 +121,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.downloadingTable reloadData];
+    [self.finishedTable reloadData];
+    
     UIImageView *downingImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background3.jpg"]];
     downingImg.alpha=0.3f;
     self.downloadingTable.backgroundView=downingImg;
@@ -144,6 +171,12 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.downloadingTable deselectRowAtIndexPath:indexPath animated:NO];
+
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(tableView==self.downloadingTable)//正在下载的文件列表
@@ -178,6 +211,7 @@
         {
             [cell.operateButton setBackgroundImage:[UIImage imageNamed:@"Pause3.png"] forState:UIControlStateNormal];
         }
+        
         return cell;
     }
     else if(tableView==self.finishedTable)//已完成下载的列表

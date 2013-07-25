@@ -161,6 +161,7 @@
     if (buttonIndex ==0) {
         QRootElement *root=[Login create];
         UINavigationController *nav=[QuickDialogController controllerWithNavigationForRoot:root];
+        [nav.navigationBar setBarStyle:UIBarStyleBlack];
         [self.sideMenu setRootViewController:nav];
     }
     

@@ -16,7 +16,7 @@
 #import "Constants.h"
 
 @interface DownloadViewController : RootViewController
-<UITableViewDataSource,UITabBarDelegate,DownloadDelegate>{
+<UITableViewDataSource,UITabBarDelegate,DownloadDelegate,UITableViewDelegate>{
     IBOutlet UITableView *downloadingTable;
     IBOutlet  UITableView *finishedTable;
     NSMutableArray *downingList;

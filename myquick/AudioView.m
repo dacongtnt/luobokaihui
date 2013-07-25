@@ -30,6 +30,7 @@
     
 	self.fileArray = [[NSMutableArray alloc]initWithArray:[mymemo loadOldFile]];
     NSLog(@"%@",self.fileArray);
+    [fileArray removeObject:@"Temp"];
     
     
     [self.view addSubview:self.tableView];

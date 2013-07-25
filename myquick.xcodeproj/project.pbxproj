@@ -94,6 +94,7 @@
 		6BAC0F851796336B00090A21 /* QWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC0F561796336B00090A21 /* QWebViewController.m */; };
 		6BAC0F871796343B00090A21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAC0F861796343B00090A21 /* MapKit.framework */; };
 		6BAC0F891796344500090A21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAC0F881796344500090A21 /* CoreLocation.framework */; };
+		6BB77FF917A0BAE3001D22C3 /* HayateAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77FF817A0BAE3001D22C3 /* HayateAppDelegate.m */; };
 		6BC2D9861799130B00E2D9CA /* LoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9851799130B00E2D9CA /* LoginInfo.m */; };
 		6BC2D98D17991A1500E2D9CA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D98C17991A1500E2D9CA /* Login.m */; };
 		6BC2D9941799369000E2D9CA /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9931799369000E2D9CA /* JSONKit.m */; };
@@ -327,6 +328,8 @@
 		6BAC0F561796336B00090A21 /* QWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWebViewController.m; sourceTree = "<group>"; };
 		6BAC0F861796343B00090A21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6BAC0F881796344500090A21 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6BB77FF717A0BAE3001D22C3 /* HayateAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HayateAppDelegate.h; path = ../HayateAppDelegate.h; sourceTree = "<group>"; };
+		6BB77FF817A0BAE3001D22C3 /* HayateAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HayateAppDelegate.m; path = ../HayateAppDelegate.m; sourceTree = "<group>"; };
 		6BC2D9841799130B00E2D9CA /* LoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInfo.h; sourceTree = "<group>"; };
 		6BC2D9851799130B00E2D9CA /* LoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInfo.m; sourceTree = "<group>"; };
 		6BC2D98B17991A1500E2D9CA /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
@@ -349,7 +352,6 @@
 		6BE0A39D179E66A7005B749C /* BaiduMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiduMusicViewController.xib; sourceTree = "<group>"; };
 		6BE0A39E179E66A7005B749C /* CommonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHelper.h; sourceTree = "<group>"; };
 		6BE0A39F179E66A7005B749C /* CommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHelper.m; sourceTree = "<group>"; };
-		6BE0A3A0179E66A7005B749C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		6BE0A3A8179E66A7005B749C /* DownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
 		6BE0A3A9179E66A7005B749C /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
 		6BE0A3AA179E66A7005B749C /* DownloadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
@@ -749,7 +751,6 @@
 				6BE0A39D179E66A7005B749C /* BaiduMusicViewController.xib */,
 				6BE0A39E179E66A7005B749C /* CommonHelper.h */,
 				6BE0A39F179E66A7005B749C /* CommonHelper.m */,
-				6BE0A3A0179E66A7005B749C /* Constants.h */,
 				6BE0A3A8179E66A7005B749C /* DownloadCell.h */,
 				6BE0A3A9179E66A7005B749C /* DownloadCell.m */,
 				6BE0A3AA179E66A7005B749C /* DownloadCell.xib */,
@@ -776,6 +777,8 @@
 		6BE0A428179E69C9005B749C /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				6BB77FF717A0BAE3001D22C3 /* HayateAppDelegate.h */,
+				6BB77FF817A0BAE3001D22C3 /* HayateAppDelegate.m */,
 				6BE0A429179E69C9005B749C /* JSON.h */,
 				6BE0A42A179E69C9005B749C /* NSObject+SBJSON.h */,
 				6BE0A42B179E69C9005B749C /* NSObject+SBJSON.m */,
@@ -1128,6 +1131,7 @@
 				A77E93B1179FEA240026E388 /* MBAlertViewButton.m in Sources */,
 				A77E93B2179FEA240026E388 /* MBCheckMarkView.m in Sources */,
 				A77E93B3179FEA240026E388 /* MBSpinningCircle.m in Sources */,
+				6BB77FF917A0BAE3001D22C3 /* HayateAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
