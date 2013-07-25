@@ -136,6 +136,9 @@
 		6BE0A4A3179E7D5C005B749C /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE0A498179E7D5C005B749C /* ASINSStringAdditions.m */; };
 		6BE0A4A4179E7D5C005B749C /* NSHTTPCookieAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE0A49B179E7D5C005B749C /* NSHTTPCookieAdditions.m */; };
 		6BE0A4A5179E7D5C005B749C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE0A49D179E7D5C005B749C /* Reachability.m */; };
+		72A2CBB117A0F580004AFF51 /* HsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2CBB017A0F580004AFF51 /* HsTable.m */; };
+		72A2CBB517A0F5DB004AFF51 /* HsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2CBB417A0F5DB004AFF51 /* HsData.m */; };
+		72A2CBB817A0F621004AFF51 /* HsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2CBB717A0F621004AFF51 /* HsCell.m */; };
 		72BFFD86179D4AAE00764B07 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BFFD85179D4AAE00764B07 /* AViewController.m */; };
 		72BFFD8D179D4BEC00764B07 /* music.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72BFFD8C179D4BEC00764B07 /* music.jpg */; };
 		72BFFD90179D4C5A00764B07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BFFD8F179D4C5A00764B07 /* AVFoundation.framework */; };
@@ -399,6 +402,12 @@
 		6BE0A49B179E7D5C005B749C /* NSHTTPCookieAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHTTPCookieAdditions.m; sourceTree = "<group>"; };
 		6BE0A49C179E7D5C005B749C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		6BE0A49D179E7D5C005B749C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		72A2CBAF17A0F580004AFF51 /* HsTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HsTable.h; sourceTree = "<group>"; };
+		72A2CBB017A0F580004AFF51 /* HsTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HsTable.m; sourceTree = "<group>"; };
+		72A2CBB317A0F5DB004AFF51 /* HsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HsData.h; sourceTree = "<group>"; };
+		72A2CBB417A0F5DB004AFF51 /* HsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HsData.m; sourceTree = "<group>"; };
+		72A2CBB617A0F621004AFF51 /* HsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HsCell.h; sourceTree = "<group>"; };
+		72A2CBB717A0F621004AFF51 /* HsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HsCell.m; sourceTree = "<group>"; };
 		72BFFD84179D4AAE00764B07 /* AViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AViewController.h; sourceTree = SOURCE_ROOT; };
 		72BFFD85179D4AAE00764B07 /* AViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = SOURCE_ROOT; };
 		72BFFD8C179D4BEC00764B07 /* music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = music.jpg; path = ../music.jpg; sourceTree = "<group>"; };
@@ -564,6 +573,12 @@
 			children = (
 				72BFFD84179D4AAE00764B07 /* AViewController.h */,
 				72BFFD85179D4AAE00764B07 /* AViewController.m */,
+				72A2CBAF17A0F580004AFF51 /* HsTable.h */,
+				72A2CBB017A0F580004AFF51 /* HsTable.m */,
+				72A2CBB317A0F5DB004AFF51 /* HsData.h */,
+				72A2CBB417A0F5DB004AFF51 /* HsData.m */,
+				72A2CBB617A0F621004AFF51 /* HsCell.h */,
+				72A2CBB717A0F621004AFF51 /* HsCell.m */,
 				6BAA29A6179CD6BE00714C1B /* RootViewController.h */,
 				6BAA29A7179CD6BE00714C1B /* RootViewController.m */,
 				6BAA29A8179CD6BE00714C1B /* SecondViewController.h */,
@@ -1108,6 +1123,9 @@
 				A77E93B2179FEA240026E388 /* MBCheckMarkView.m in Sources */,
 				A77E93B3179FEA240026E388 /* MBSpinningCircle.m in Sources */,
 				6BB77FF917A0BAE3001D22C3 /* HayateAppDelegate.m in Sources */,
+				72A2CBB117A0F580004AFF51 /* HsTable.m in Sources */,
+				72A2CBB517A0F5DB004AFF51 /* HsData.m in Sources */,
+				72A2CBB817A0F621004AFF51 /* HsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,22 +14,18 @@
 
 @interface AViewController : RootViewController<AVAudioRecorderDelegate,UIAlertViewDelegate>
 {
-    UILabel *label;
-    UILabel *labelZero;
-    UILabel *labelOne;
-    UIActivityIndicatorView *aIndicator;
     UIButton *startButton;
     UIButton *playButton;
     NSError *error;
     BOOL flag;
     NSURL *recordedTmpFile;
     AVAudioRecorder *recorder;
-    UIProgressView *_progressView;
-    AVAudioPlayer * avPlayer;
     NSTimer *timer;
     NSTimer *tProcess;
     UISlider *slider;
     NSInteger a,b,c,d,e;
+    NSDateFormatter *dateformatter;
 }
+@property(nonatomic,retain)NSString *str;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 @end
