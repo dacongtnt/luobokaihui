@@ -82,7 +82,7 @@
 +(NSString *)getTempFolderPath
 {
 //    Memo *mymemo=[[Memo alloc] init];
-    return [[self getDocumentPath] stringByAppendingPathComponent:@"Temp"];
+    return [NSHomeDirectory() stringByAppendingPathComponent:@"Temp"];
 }
 
 +(BOOL)isExistFile:(NSString *)fileName
