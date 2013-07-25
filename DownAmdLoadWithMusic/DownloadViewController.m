@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 张飞. All rights reserved.
 //
 #import "DownloadViewController.h"
-
+#import "Memo.h"
 
 @implementation DownloadViewController
 
@@ -273,16 +273,28 @@
         }
         else//已经完成下载的表格
         {
-            FileModel *selectFile=[self.finishedList objectAtIndex:indexPath.row];
-            NSString *path=[[CommonHelper getTargetFloderPath]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.temp",selectFile.fileName]];
+//            FileModel *selectFile=[self.finishedList objectAtIndex:indexPath.row];
+//            NSString *path=[[CommonHelper getTargetFloderPath]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.temp",selectFile.fileName]];
+//            
+//            [fileManager removeItemAtPath:path error:&error];
+//            if(!error)
+//            {
+//                NSLog(@"%@",[error description]);
+//            }
+//            [self.finishedList removeObject:selectFile];
+//            [self.finishedTable reloadData];
             
-            [fileManager removeItemAtPath:path error:&error];
-            if(!error)
-            {
-                NSLog(@"%@",[error description]);
-            }
-            [self.finishedList removeObject:selectFile];
+            FileModel *selectFile=[self.finishedList objectAtIndex:indexPath.row];
+            
+            NSString *removeName=selectFile.fileName;
+            [finishedList removeObjectAtIndex:indexPath.row];
+            Memo *mymemo=[[Memo alloc] init];
+            [mymemo deleteOldFile:removeName];
+            NSLog(@"%@",removeName);
+            
             [self.finishedTable reloadData];
+
+            
         }
     }
 }
