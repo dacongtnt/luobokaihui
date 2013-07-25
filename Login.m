@@ -31,14 +31,14 @@
     }
     
     QEntryElement *login = [[QEntryElement alloc] init];
-    login.title = @"      用户名：";
+    login.title = [@"       " stringByAppendingString: @"      用户名："];
     login.key = @"login";
     login.hiddenToolbar = YES;
     login.placeholder = @"User Name";
     [main addElement:login];
     
     QEntryElement *password = [[QEntryElement alloc] init];
-    password.title = @"        密码：";
+    password.title = [@"       " stringByAppendingString:@"      密    码："];
     password.key = @"password";
     password.secureTextEntry = YES;
     password.hiddenToolbar = YES;
