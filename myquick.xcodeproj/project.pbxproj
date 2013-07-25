@@ -20,6 +20,7 @@
 		02AABBED179FAA6200F52E1A /* downloaded.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AABBE9179FAA6200F52E1A /* downloaded.png */; };
 		02AABBEF179FAA6200F52E1A /* xiazai.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AABBEB179FAA6200F52E1A /* xiazai.png */; };
 		02AABBF2179FB14800F52E1A /* Pause3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AABBF1179FB14600F52E1A /* Pause3.png */; };
+		02B52D2317A0FCDA00A710D3 /* duihao2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B52D2217A0FCDA00A710D3 /* duihao2.png */; };
 		6BA2715C179A56CB0035AA75 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715B179A56CB0035AA75 /* CFNetwork.framework */; };
 		6BA2715E179A56D80035AA75 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715D179A56D80035AA75 /* SystemConfiguration.framework */; };
 		6BA27160179A56E40035AA75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA2715F179A56E40035AA75 /* MobileCoreServices.framework */; };
@@ -95,6 +96,7 @@
 		6BAC0F871796343B00090A21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAC0F861796343B00090A21 /* MapKit.framework */; };
 		6BAC0F891796344500090A21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAC0F881796344500090A21 /* CoreLocation.framework */; };
 		6BB77FF917A0BAE3001D22C3 /* HayateAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB77FF817A0BAE3001D22C3 /* HayateAppDelegate.m */; };
+		6BB7804A17A12E9C001D22C3 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7804917A12E9C001D22C3 /* LoginController.m */; };
 		6BC2D9861799130B00E2D9CA /* LoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9851799130B00E2D9CA /* LoginInfo.m */; };
 		6BC2D98D17991A1500E2D9CA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D98C17991A1500E2D9CA /* Login.m */; };
 		6BC2D9941799369000E2D9CA /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2D9931799369000E2D9CA /* JSONKit.m */; };
@@ -194,6 +196,7 @@
 		02AABBE9179FAA6200F52E1A /* downloaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downloaded.png; sourceTree = "<group>"; };
 		02AABBEB179FAA6200F52E1A /* xiazai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiazai.png; sourceTree = "<group>"; };
 		02AABBF1179FB14600F52E1A /* Pause3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause3.png; sourceTree = "<group>"; };
+		02B52D2217A0FCDA00A710D3 /* duihao2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duihao2.png; sourceTree = "<group>"; };
 		6BA2715B179A56CB0035AA75 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6BA2715D179A56D80035AA75 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6BA2715F179A56E40035AA75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -335,6 +338,8 @@
 		6BAC0F881796344500090A21 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6BB77FF717A0BAE3001D22C3 /* HayateAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HayateAppDelegate.h; path = ../HayateAppDelegate.h; sourceTree = "<group>"; };
 		6BB77FF817A0BAE3001D22C3 /* HayateAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HayateAppDelegate.m; path = ../HayateAppDelegate.m; sourceTree = "<group>"; };
+		6BB7804817A12E9C001D22C3 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		6BB7804917A12E9C001D22C3 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		6BC2D9841799130B00E2D9CA /* LoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInfo.h; sourceTree = "<group>"; };
 		6BC2D9851799130B00E2D9CA /* LoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInfo.m; sourceTree = "<group>"; };
 		6BC2D98B17991A1500E2D9CA /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
@@ -497,6 +502,7 @@
 		027B1D64179E86EF00AB5EBF /* Downloadimage */ = {
 			isa = PBXGroup;
 			children = (
+				02B52D2217A0FCDA00A710D3 /* duihao2.png */,
 				02AABBF1179FB14600F52E1A /* Pause3.png */,
 				02AABBE8179FAA6200F52E1A /* download 1.png */,
 				02AABBE9179FAA6200F52E1A /* downloaded.png */,
@@ -733,6 +739,8 @@
 		6BC2D996179936B300E2D9CA /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				6BB7804817A12E9C001D22C3 /* LoginController.h */,
+				6BB7804917A12E9C001D22C3 /* LoginController.m */,
 				6BA2718E179A83010035AA75 /* Memo.h */,
 				6BA2718F179A83010035AA75 /* Memo.m */,
 				6BC2D98B17991A1500E2D9CA /* Login.h */,
@@ -1031,12 +1039,16 @@
 				02AABBED179FAA6200F52E1A /* downloaded.png in Resources */,
 				02AABBEF179FAA6200F52E1A /* xiazai.png in Resources */,
 				02AABBF2179FB14800F52E1A /* Pause3.png in Resources */,
+<<<<<<< HEAD
 				72A2CBC317A0FD8A004AFF51 /* 001.png in Resources */,
 				72A2CBC417A0FD8A004AFF51 /* 002.png in Resources */,
 				72A2CBC517A0FD8A004AFF51 /* 004.png in Resources */,
 				72A2CBC617A0FD8A004AFF51 /* 005.png in Resources */,
 				72A2CBC717A0FD8A004AFF51 /* 006.png in Resources */,
 				72A2CBC817A0FD8A004AFF51 /* 011.png in Resources */,
+=======
+				02B52D2317A0FCDA00A710D3 /* duihao2.png in Resources */,
+>>>>>>> c494769be3f01fc9e5be9bf12d9b7624118cd6b9
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,6 +1162,7 @@
 				72A2CBB117A0F580004AFF51 /* HsTable.m in Sources */,
 				72A2CBB517A0F5DB004AFF51 /* HsData.m in Sources */,
 				72A2CBB817A0F621004AFF51 /* HsCell.m in Sources */,
+				6BB7804A17A12E9C001D22C3 /* LoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
