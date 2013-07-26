@@ -28,7 +28,8 @@
 
 //    self.quickDialogTableView.backgroundColor = [UIColor colorWithHue:0.1174 saturation:0.7131 brightness:0.8618 alpha:1.0000];
     self.quickDialogTableView.separatorStyle=NO;
-    self.quickDialogTableView.backgroundColor = [UIColor colorWithRed:0.9582 green:0.9104 blue:0.7991 alpha:1.0000];
+//    self.quickDialogTableView.backgroundColor = [UIColor colorWithRed:0.9582 green:0.9104 blue:0.7991 alpha:1.0000];
+    self.quickDialogTableView.backgroundColor = [UIColor colorWithRed:0.3542 green:0.3532 blue:0.2548 alpha:1.0000];
     self.quickDialogTableView.bounces = NO;
     self.quickDialogTableView.styleProvider = self;
 
@@ -71,8 +72,9 @@
     cell.backgroundColor = [UIColor colorWithRed:0.9582 green:0.9104 blue:0.7991 alpha:1.0000];
 
     if ([element isKindOfClass:[QEntryElement class]] || [element isKindOfClass:[QButtonElement class]]){
-        cell.textLabel.textColor = [UIColor colorWithRed:0.6033 green:0.2323 blue:0.0000 alpha:1.0000];
-    }   
+//        cell.textLabel.textColor = [UIColor colorWithRed:0.6033 green:0.2323 blue:0.0000 alpha:1.0000];
+         cell.textLabel.textColor = [UIColor blackColor];
+    }
 }
 
 + (QRootElement *)createDetailsForm {

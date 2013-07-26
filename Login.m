@@ -38,7 +38,7 @@
     [main addElement:login];
     
     QEntryElement *password = [[QEntryElement alloc] init];
-    password.title = [@"       " stringByAppendingString:@"      密    码："];
+    password.title = [@"       " stringByAppendingString:@"        密码："];
     password.key = @"password";
     password.secureTextEntry = YES;
     password.hiddenToolbar = YES;

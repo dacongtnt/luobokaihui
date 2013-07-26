@@ -1039,16 +1039,16 @@
 				02AABBED179FAA6200F52E1A /* downloaded.png in Resources */,
 				02AABBEF179FAA6200F52E1A /* xiazai.png in Resources */,
 				02AABBF2179FB14800F52E1A /* Pause3.png in Resources */,
-<<<<<<< HEAD
+
 				72A2CBC317A0FD8A004AFF51 /* 001.png in Resources */,
 				72A2CBC417A0FD8A004AFF51 /* 002.png in Resources */,
 				72A2CBC517A0FD8A004AFF51 /* 004.png in Resources */,
 				72A2CBC617A0FD8A004AFF51 /* 005.png in Resources */,
 				72A2CBC717A0FD8A004AFF51 /* 006.png in Resources */,
 				72A2CBC817A0FD8A004AFF51 /* 011.png in Resources */,
-=======
+
 				02B52D2317A0FCDA00A710D3 /* duihao2.png in Resources */,
->>>>>>> c494769be3f01fc9e5be9bf12d9b7624118cd6b9
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
