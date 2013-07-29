@@ -20,10 +20,14 @@
 #import "Login.h"
 #import "DemoViewController.h"
 #import "AudioView.h"
+#import "Memo.h"
+#import "MDAudioFile.h"
+#import "MDAudioPlayerController.h"
 
 @interface LoginController ()
 - (void)onLogin:(QButtonElement *)buttonElement;
 - (void)onAbout;
+@property (nonatomic, retain) NSMutableArray *fileArray;
 
 @end
 
@@ -201,9 +205,26 @@
                 //            QRootElement *root=[Login createMainFrom];
                 //            ViewController *view=[[ViewController alloc] initWithRoot:root];
                 
+                NSMutableArray *songs = [[NSMutableArray alloc] init];
+                Memo *mymemo=[[Memo alloc]init];
+                self.fileArray = [[NSMutableArray alloc]initWithArray:[mymemo loadOldFile]];
+                NSLog(@"%@",self.fileArray);
+                
+                [songs removeAllObjects];
+                for (NSString *song in self.fileArray)
+                {
+                    NSString *soundFilePath=[mymemo.filePath stringByAppendingPathComponent:song];
+                    //初始化音频类 并且添加播放文件,把音频文件转换成url格式
+                    MDAudioFile *audioFile = [[MDAudioFile alloc] initWithPath:[NSURL fileURLWithPath:soundFilePath]];
+                    
+                    [songs addObject:audioFile];
+                }
+                
+                MDAudioPlayerController *mdaudio= [[MDAudioPlayerController alloc] initWithSoundFiles:songs atPath:mymemo.filePath andSelectedIndex:nil];
+                
                 AudioView *view=[[AudioView alloc] init];
                 
-                [self.navigationController pushViewController:view animated:YES];
+                [self.navigationController pushViewController:mdaudio animated:YES];
                 MCRelease(view);
             }else {
                 UIAlertView *WarnAlertb=[[UIAlertView alloc] initWithTitle:@"Warn" message:@"密码错误" delegate:self cancelButtonTitle:@"YES!" otherButtonTitles:nil, nil];

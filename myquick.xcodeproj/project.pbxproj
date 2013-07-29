@@ -160,6 +160,7 @@
 		A77E93B1179FEA240026E388 /* MBAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E93A6179FEA240026E388 /* MBAlertViewButton.m */; };
 		A77E93B2179FEA240026E388 /* MBCheckMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E93A8179FEA240026E388 /* MBCheckMarkView.m */; };
 		A77E93B3179FEA240026E388 /* MBSpinningCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A77E93AA179FEA240026E388 /* MBSpinningCircle.m */; };
+		A799A87117A6302B0085B245 /* MDAudioPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A799A87017A6302B0085B245 /* MDAudioPlayerTableViewCell.m */; };
 		A7A63A54179D4E1A00B04F46 /* MDAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */; };
 		A7A63A55179D4E1A00B04F46 /* MDAudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A63A53179D4E1A00B04F46 /* MDAudioPlayerController.m */; };
 		A7A63A59179D4EF300B04F46 /* AudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A63A58179D4EF300B04F46 /* AudioView.m */; };
@@ -450,6 +451,8 @@
 		A77E93A8179FEA240026E388 /* MBCheckMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCheckMarkView.m; sourceTree = "<group>"; };
 		A77E93A9179FEA240026E388 /* MBSpinningCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpinningCircle.h; sourceTree = "<group>"; };
 		A77E93AA179FEA240026E388 /* MBSpinningCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpinningCircle.m; sourceTree = "<group>"; };
+		A799A86F17A6302B0085B245 /* MDAudioPlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAudioPlayerTableViewCell.h; sourceTree = "<group>"; };
+		A799A87017A6302B0085B245 /* MDAudioPlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAudioPlayerTableViewCell.m; sourceTree = "<group>"; };
 		A7A63A50179D4E1A00B04F46 /* MDAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAudioFile.h; path = myquick/MDAudioFile.h; sourceTree = "<group>"; };
 		A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAudioFile.m; path = myquick/MDAudioFile.m; sourceTree = "<group>"; };
 		A7A63A52179D4E1A00B04F46 /* MDAudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAudioPlayerController.h; path = myquick/MDAudioPlayerController.h; sourceTree = "<group>"; };
@@ -760,6 +763,8 @@
 				A7A63A51179D4E1A00B04F46 /* MDAudioFile.m */,
 				A7A63A52179D4E1A00B04F46 /* MDAudioPlayerController.h */,
 				A7A63A53179D4E1A00B04F46 /* MDAudioPlayerController.m */,
+				A799A86F17A6302B0085B245 /* MDAudioPlayerTableViewCell.h */,
+				A799A87017A6302B0085B245 /* MDAudioPlayerTableViewCell.m */,
 			);
 			name = AudioPlayerForMusic;
 			sourceTree = "<group>";
@@ -1039,16 +1044,13 @@
 				02AABBED179FAA6200F52E1A /* downloaded.png in Resources */,
 				02AABBEF179FAA6200F52E1A /* xiazai.png in Resources */,
 				02AABBF2179FB14800F52E1A /* Pause3.png in Resources */,
-
 				72A2CBC317A0FD8A004AFF51 /* 001.png in Resources */,
 				72A2CBC417A0FD8A004AFF51 /* 002.png in Resources */,
 				72A2CBC517A0FD8A004AFF51 /* 004.png in Resources */,
 				72A2CBC617A0FD8A004AFF51 /* 005.png in Resources */,
 				72A2CBC717A0FD8A004AFF51 /* 006.png in Resources */,
 				72A2CBC817A0FD8A004AFF51 /* 011.png in Resources */,
-
 				02B52D2317A0FCDA00A710D3 /* duihao2.png in Resources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1165,7 @@
 				72A2CBB517A0F5DB004AFF51 /* HsData.m in Sources */,
 				72A2CBB817A0F621004AFF51 /* HsCell.m in Sources */,
 				6BB7804A17A12E9C001D22C3 /* LoginController.m in Sources */,
+				A799A87117A6302B0085B245 /* MDAudioPlayerTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

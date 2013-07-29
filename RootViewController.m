@@ -17,13 +17,16 @@
 #import "DownloadViewController.h"
 #import "BaiduMusicViewController.h"
 #import <dispatch/dispatch.h>
+#import "MDAudioPlayerController.h"
+#import "MDAudioFile.h"
+#import "Memo.h"
 
 @interface RootViewController ()
 
 @end
 
 @implementation RootViewController
-
+@synthesize fileArray;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,6 +38,22 @@
 
 - (void)showMenu
 {
+    NSMutableArray *songs = [[NSMutableArray alloc] init];
+    Memo *mymemo=[[Memo alloc]init];
+    self.fileArray = [[NSMutableArray alloc]initWithArray:[mymemo loadOldFile]];
+    [self.fileArray removeObject:@"Temp,"];
+    NSLog(@"%@",self.fileArray);
+    
+    [songs removeAllObjects];
+    for (NSString *song in self.fileArray)
+    {
+        NSString *soundFilePath=[mymemo.filePath stringByAppendingPathComponent:song];
+        //初始化音频类 并且添加播放文件,把音频文件转换成url格式
+        MDAudioFile *audioFile = [[MDAudioFile alloc] initWithPath:[NSURL fileURLWithPath:soundFilePath]];
+        
+        [songs addObject:audioFile];
+    }
+    
     if (!_sideMenu) {
         
         dispatch_queue_t myQueue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -42,17 +61,19 @@
         NSMutableArray *myArray=[[NSMutableArray alloc] init];
         
         dispatch_async(myQueue, ^{
-            __block  AudioView *viewController = nil;
+            __block  MDAudioPlayerController *viewController = nil;
             __block  RESideMenuItem *homeItem=nil;
             dispatch_sync(myQueue, ^{
-                viewController = [[AudioView alloc] init];
                 homeItem = [[RESideMenuItem alloc] initWithTitle:@"音乐播放器" action:^(RESideMenu *menu, RESideMenuItem *item) {
+                    
+                    viewController = [[MDAudioPlayerController alloc] initWithSoundFiles:songs atPath:mymemo.filePath andSelectedIndex:0];
                     viewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
                     
                     [navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-
+                    
                     [menu setRootViewController:navigationController];
+                    
                 }];
             });
             dispatch_sync(mainQueue, ^{

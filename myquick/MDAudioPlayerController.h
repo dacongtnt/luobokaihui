@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import "RootViewController.h"
 
-@interface MDAudioPlayerController : UIViewController <AVAudioPlayerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MDAudioPlayerController : RootViewController <AVAudioPlayerDelegate, UITableViewDelegate, UITableViewDataSource>
 {
 	NSMutableArray		*soundFiles;
 	NSString			*soundFilesPath;

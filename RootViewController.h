@@ -14,5 +14,7 @@
 @interface RootViewController : UIViewController<UIActionSheetDelegate>
 
 @property (strong, readonly, nonatomic) RESideMenu *sideMenu;
+@property (nonatomic, retain) NSMutableArray *fileArray;
+
 
 @end
