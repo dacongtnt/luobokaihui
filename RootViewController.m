@@ -20,7 +20,7 @@
 #import "MDAudioPlayerController.h"
 #import "MDAudioFile.h"
 #import "Memo.h"
-
+#import "ScrollViewController.h"
 @interface RootViewController ()
 
 @end
@@ -138,10 +138,10 @@
         });
         
         dispatch_async(myQueue, ^{
-            __block  SecondViewController *secondViewController = nil;
+            __block  ScrollViewController *secondViewController = nil;
             __block  RESideMenuItem *profileItem=nil;
             dispatch_sync(myQueue, ^{
-                secondViewController = [[SecondViewController alloc] init];
+                secondViewController = [[ScrollViewController alloc] init];
                 profileItem = [[RESideMenuItem alloc] initWithTitle:@"关于我们" action:^(RESideMenu *menu, RESideMenuItem *item) {
                     secondViewController.title = item.title;
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];

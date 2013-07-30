@@ -39,7 +39,7 @@
     FileModel *downFile=((DownloadCell *)[[[btnOperate superview] superview]superview]).fileInfo;
     if(downFile.isDownloading)//文件正在下载，点击之后暂停下载
     {
-        [operateButton setBackgroundImage:[UIImage imageNamed:@"xiazai.png"] forState:UIControlStateNormal];
+        [operateButton setBackgroundImage:[UIImage imageNamed:@"DownLoad.png"] forState:UIControlStateNormal];
         downFile.isDownloading=NO;
         [request cancel];
         [request release];
