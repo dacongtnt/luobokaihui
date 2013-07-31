@@ -8,7 +8,6 @@
 
 #import "Login.h"
 #import "LoginInfo.h"
-#import "QuickDialogController+myAction.h"
 #import "Memo.h"
 
 @implementation Login
@@ -74,56 +73,56 @@
 
 }
 
-+ (QRootElement *)createMainFrom
-{
-    Memo *memo=[[Memo alloc] init];
-    [memo addNewFile:@"NO1.txt" contents:@"acafa"];
-    [memo addNewFile:@"NO2.txt" contents:@"acafa"];
-    [memo addNewFile:@"NO3.txt" contents:@"acafa"];
-    [memo addNewFile:@"NO4.txt" contents:@"acafa"];
-    
-//    NSString *str=[[memo loadOldFile] objectAtIndex:0];
-//    NSData *reades=[NSData dataWithContentsOfFile:[memo.filePath stringByAppendingPathComponent:str]];
-//    NSString *strs=[[NSString alloc] initWithData:[reades subdataWithRange:NSMakeRange(0, reades.length)] encoding:NSUTF8StringEncoding];
-    
-    
-
-
-    
-    QRootElement *root = [[QRootElement alloc] init];
-    root.grouped=YES;
-    QSection *sec=[[QSection alloc] init];
-    
-    NSLog(@"%@",[[memo loadOldFile] objectAtIndex:0]);
-    
-    NSArray *array=[NSArray arrayWithArray:[memo loadOldFile]];
-    NSLog(@"%@",array);
-    
-//    for (int i=0; i<[array count]; i++) {
-//        QLabelElement *label=[[QLabelElement alloc] initWithTitle:[array objectAtIndex:i] Value:nil];
-//        [sec addElement:label];
-//    }
-    
-    QAutoEntryElement *autoElement = [[QAutoEntryElement alloc] initWithTitle:@"AutoComplete" value:nil placeholder:@"type letter M"];
-    autoElement.autoCompleteValues = array;
-    autoElement.autoCompleteColor = [UIColor orangeColor];
-//	autoElement.key = @"entry2";
-    
-    [sec addElement:autoElement];
-
-//    QLabelElement *label=[[QLabelElement alloc] initWithTitle:@"fadfaf" Value:nil];
+//+ (QRootElement *)createMainFrom
+//{
+//    Memo *memo=[[Memo alloc] init];
+//    [memo addNewFile:@"NO1.txt" contents:@"acafa"];
+//    [memo addNewFile:@"NO2.txt" contents:@"acafa"];
+//    [memo addNewFile:@"NO3.txt" contents:@"acafa"];
+//    [memo addNewFile:@"NO4.txt" contents:@"acafa"];
 //    
-//    QBadgeElement *badge3 = [[QBadgeElement alloc] initWithTitle:@"With some action" Value:@"123"];
-//    badge3.badgeColor = [UIColor purpleColor];
-//    QSection *secss = [[QSection alloc] initWithTitle:@"Jazzin.."];
-//    [secss addElement:label];
-//    [badge3 addSection:secss];
-//    [badge3 addSection:sec];
-//    [sec addElement:badge3];
-    
-    [root addSection:sec];
-
-    return root;
-}
+////    NSString *str=[[memo loadOldFile] objectAtIndex:0];
+////    NSData *reades=[NSData dataWithContentsOfFile:[memo.filePath stringByAppendingPathComponent:str]];
+////    NSString *strs=[[NSString alloc] initWithData:[reades subdataWithRange:NSMakeRange(0, reades.length)] encoding:NSUTF8StringEncoding];
+//    
+//    
+//
+//
+//    
+//    QRootElement *root = [[QRootElement alloc] init];
+//    root.grouped=YES;
+//    QSection *sec=[[QSection alloc] init];
+//    
+//    NSLog(@"%@",[[memo loadOldFile] objectAtIndex:0]);
+//    
+//    NSArray *array=[NSArray arrayWithArray:[memo loadOldFile]];
+//    NSLog(@"%@",array);
+//    
+////    for (int i=0; i<[array count]; i++) {
+////        QLabelElement *label=[[QLabelElement alloc] initWithTitle:[array objectAtIndex:i] Value:nil];
+////        [sec addElement:label];
+////    }
+//    
+//    QAutoEntryElement *autoElement = [[QAutoEntryElement alloc] initWithTitle:@"AutoComplete" value:nil placeholder:@"type letter M"];
+//    autoElement.autoCompleteValues = array;
+//    autoElement.autoCompleteColor = [UIColor orangeColor];
+////	autoElement.key = @"entry2";
+//    
+//    [sec addElement:autoElement];
+//
+////    QLabelElement *label=[[QLabelElement alloc] initWithTitle:@"fadfaf" Value:nil];
+////    
+////    QBadgeElement *badge3 = [[QBadgeElement alloc] initWithTitle:@"With some action" Value:@"123"];
+////    badge3.badgeColor = [UIColor purpleColor];
+////    QSection *secss = [[QSection alloc] initWithTitle:@"Jazzin.."];
+////    [secss addElement:label];
+////    [badge3 addSection:secss];
+////    [badge3 addSection:sec];
+////    [sec addElement:badge3];
+//    
+//    [root addSection:sec];
+//
+//    return root;
+//}
 
 @end
