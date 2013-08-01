@@ -238,6 +238,7 @@
     [self.root fetchValueIntoObject:info];
     
     [self performSelector:@selector(loginCompleted:) withObject:info afterDelay:2];
+    NSLog(@"test the commit");
 }
 
 
