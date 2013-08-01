@@ -16,11 +16,11 @@
     self=[super init];
     if (self) {
         NSString *DocumentDirectorys=[[NSString alloc] initWithString:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]];
-        self.filePath=[[NSString alloc] initWithString:[DocumentDirectorys stringByAppendingPathComponent:@"Memo"]];
+        self.filePath=[[NSString alloc] initWithString:[DocumentDirectorys stringByAppendingPathComponent:@"Songs"]];
         self.fileManagerOne=[NSFileManager defaultManager];
         [fileManagerOne createDirectoryAtPath:self.filePath withIntermediateDirectories:YES attributes:nil error:nil];
         [DocumentDirectorys release];
-        NSLog(@"%@",filePath);
+        NSLog(@"测试请暂时往路径中放置歌曲%@",filePath);
     }
     
     return self;
@@ -28,8 +28,7 @@
 
 -(void)dealloc
 {
-    [filePath release];
-    filePath=nil;
+    MCRelease(filePath);
     [super dealloc];
 }
 
@@ -44,6 +43,7 @@
 }
 -(void)deleteOldFile:(NSString*)fileName
 {
-    [fileManagerOne removeItemAtPath:[filePath stringByAppendingString:fileName] error:nil];
+    NSString *removeName=[filePath stringByAppendingString:[@"/"stringByAppendingString:fileName]];
+    [fileManagerOne removeItemAtPath:removeName error:nil];
 }
 @end

@@ -11,5 +11,4 @@
 @interface Login : QuickDialogController<QuickDialogEntryElementDelegate>
 
 + (QRootElement *)create;
-+ (QRootElement *)createMainFrom;
 @end
